@@ -1,0 +1,7 @@
+node_modules
+LVI
+*.pdf
+*.psd
+*.ai
+*.lock
+*.log
