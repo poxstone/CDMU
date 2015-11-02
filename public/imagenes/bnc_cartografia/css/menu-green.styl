@@ -1,0 +1,192 @@
+@import 'nib'
+@import './stylus/variables'
+@import './stylus/mixin'
+@import './stylus/animations.styl'
+
+/*VARIABLES*/
+$green= #5b7b29
+$green2= #649620
+$wrapper = 960px
+$textFont= lato, arial, sans-serif
+$text_p= 14px
+$rad= 2px
+$paddingBox= 10px
+
+/*PARCHES DRUPAL*/
+.text-center
+  text-align center
+
+#banner
+#content
+
+  > div
+    max-width ($wrapper - 20)
+    margin auto
+      
+//HEADER
+#banner
+  #block-block-5
+    height auto
+    background #5b7b29
+
+//MENU
+#MENU-CDMU
+  position relative
+  z-index 10
+  box-shadow rgba(#000,.33) 0 0 8px 0
+  > *
+    display inline-block
+    vertical-align middle
+  .cont-form
+    float right
+    margin-top 15px
+  > .cont-link
+    font-size $text_p
+    font-weight normal
+    min-width 160px
+    padding-right 10px
+    &:hover
+      img.ico-menu
+        opacity 1
+    &:hover #cont-newmenu
+      display block
+      animation menuDown ease-in-out 500ms
+  span.titulo
+    cursor pointer
+    border-left 1px solid #425b1d
+    padding-left 10px
+  img.ico-menu
+    cursor pointer
+    display inline-block
+    vertical-align middle
+    margin 8px 10px 2px
+    opacity 0.5
+    transition 250ms ease-in-out all
+  .breadcrumb
+    padding 0
+    margin 0
+    color #fff
+    font-weight normal
+    .breadcrumb-separator
+      color #fff
+      color rgba(#fff,.75)
+    a
+      color rgba(#fff,.75)
+      transition ease-in-out 250ms all
+      &:hover
+        color #fff
+#cont-newmenu
+  background $green2
+  background rgba($green2,.9)
+  box-shadow: rgba(0,0,0,0.33) 4px 4px 8px;
+  min-width 320px
+  position absolute
+  left 0
+  display none
+  top 100%
+  
+  h2
+    background none
+    font-family $textFont
+    color #fff
+    display none
+  .content
+    background none
+  #sidebar-first
+    width auto
+    float none
+    margin 0
+
+  .cont-input
+    .container-inline
+      display block
+      width auto
+  
+    .form-item-search-block-form
+      display inline-block
+      width 90%
+      float none
+      input.form-text//buscador
+        background $green
+        background rgba(#000,.25)
+        border-radius $rad
+        border 1px solid transparent
+        font-family "Lucida Grande","Lucida Sans Unicode",Segoe UI,Helvetica,Arial,sans-serif;
+        margin ($paddingBox *2) 0 ($paddingBox *1.5) ($paddingBox *3)
+        margin-right 0
+        padding 0
+        width 90%
+        color #fff
+        box-shadow none
+        height 24px
+        line-height 1.2em
+        font-weight normal
+        font-size 14px
+        font-family arial
+        text-indent 0.5em
+        display block
+        float none
+        transition ease-in-out 250ms all
+        &:hover
+          background rgba(#000,.5)
+        &:focus
+          background rgba(#000,.5)
+          outline none
+          border-color #fff
+    .form-actions
+      input#edit-submit
+        box-shadow none
+        color transparent
+        font-size 0
+        size 26px
+        border none
+        outline none
+        position relative
+        z-index 2
+        top 7px
+        right 26px
+        display inline-block
+        background url(../img/ico-search.png) no-repeat center center transparent
+        cursor pointer
+        &:hover
+          background-color rgba(#fff,.25)
+  .block-menu-menu-recursos-digitales
+    background none
+    .content
+      [style]
+        padding 0 !important
+        background none !important
+  #block-block-13 [style]
+    border-width 1px 0 0 0 !important
+    margin-top $paddingBox
+    
+  ul.menu
+      background none
+      margin 0 ($paddingBox *2.5)
+      text-shadow rgba(#000,0.25) 2px 2px  4px
+      cursor default
+    li
+      background none
+      border none
+      padding 0
+      margin auto
+      width auto
+      &.collapsed
+        list-style-image url(../img/menu-collapsed.png)
+      &.expanded
+        list-style-image url(../img/menu-expanded.png)
+      &.leaf
+        list-style-image url(../img/menu-leaf.png)
+      a
+        display block
+        padding $paddingBox *.5
+        margin auto
+        width auto
+        box-shadow rgba(#000,0) 0 0 0 0
+        transition ease-in-out all 250ms
+        &:hover
+          background #73941d
+          background rgba(#ffd30f,.15)
+          box-shadow rgba(#000,.25) 0 0 5px 0
+      ul.menu
+        margin-right 0

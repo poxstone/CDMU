@@ -1,0 +1,21 @@
+link#stylo(rel="stylesheet",href="#{rdir}/imagenes/bnc_cartografia/css/menu-green.css")
+script(src="#{rdir}/imagenes/bnc_cartografia/js/menu-green-dsn.js")
+//link#stylo(rel="stylesheet",href="#{rdir}/imagenes/bnc_cartografia/css/cdmu-style.css")
+//script(src="#{rdir}/imagenes/bnc_cartografia/js/jquery.min.js")
+
+div#MENU-CDMU
+  div.cont-link
+    img.ico-menu(src="#{rdir}/imagenes/bnc_cartografia/img/ico-menu.png")
+    span.titulo Biblioteca Digital
+    div#cont-newmenu
+  div.cont-form
+    form#search-personalizado-form(action='', method='post', accept-charset='UTF-8')
+      div.cont-input
+        .container-inline
+          .form-item.form-type-textfield.form-item-search-block-form
+            input#edit-search-personalizado-form--2.form-text(name='search_block_form', onfocus="if (this.value == 'Buscar') {this.value = '';}", onblur="if (this.value == '') {this.value = 'Buscar';}", type='text', size='15', maxlength='128', value='Buscar')
+          #edit-actions.form-actions.form-wrapper
+            input#edit-submit.form-submit(name='submit', type='image', src='http://www.bibliotecanacional.gov.co/themes/corporateclean/images/search-button.png')
+    div.cont-link
+      a(href='http://catalogo.bibliotecanacional.gov.co', target='_blank')
+        img(src='http://www.bibliotecanacional.gov.co/sites/default/files/boton_search_cabezote.png', alt='Catálogo', width='68')

@@ -1,0 +1,207 @@
+html
+  background #f4f2ef
+  min-width $wrapper
+  @media (max-width: $screen-sm)
+    min-width 0
+html
+body
+  background #fff
+  &.show-popUp
+    overflow hidden !important
+body.i i
+  color purple !important
+
+/*PARCHES DRUPAL*/
+#content
+  .msie_10 &, .msie_9 &, .msie_8 &
+    margin-top -4px
+
+.text-center
+  text-align center
+
+#banner
+#content
+  font-family $textFont
+  line-height 1.3em
+  &, p
+    font-size $fontSize
+    line-height 20px
+    @media (max-width: $screen-sm)
+      line-height 15px
+
+  h1,h2,h3,h4,h5,h6
+    font-family $titleFont
+    text-shadow none
+    color $textColor
+    padding $paddingBox 0
+    margin $paddingBox auto
+    font-weight normal
+    line-height 1em
+
+  > div
+    max-width ($wrapper - 20)
+    margin auto
+    > *
+      margin-left -1px !important //descuadre respecto al menu
+
+/*PARCHES DRUPAL*/
+#main
+  padding-top 0 !important
+  .breadcrumb
+    display none !important
+#block-system-main
+  margin auto
+  width auto
+  > .content{}
+#content
+  .msie_10 &, .msie_9 &, .msie_8 &
+    margin-top -4px
+    
+//CONTENIDO
+#content
+#banner #content-inside
+  max-width none !important
+  width auto
+#CDMU-CONT
+  .wrapper
+    max-width $wrapper - 19
+    margin auto
+  .header
+    background-color $aquamarine
+    background linear-gradient(to bottom, $aquamarine 0%, lighten($aquamarine, 40%) 50%, $aquamarine 100%)
+    height 430px
+    position relative
+    z-index 1
+    &:before
+    &:after
+      content ''
+      display block
+      position absolute
+      left 0
+      z-index 1
+      right 0
+    &:before
+      top -1px
+      height 65px
+      background url(../img/banner/bg-top.png) center top repeat-x
+    &:after
+      bottom -1px
+      height 102px
+      background url(../img/banner/bg-bottom.png) center bottom repeat-x
+    .bg-figure
+      animation bg_left linear 30s infinite
+      background url(../img/banner/bg-aquamarine.png) repeat-x center center transparent
+      position absolute
+      top 0
+      left 0
+      height 100%
+      width 100%
+      
+  .credits
+    display block
+    position fixed
+    right 0
+    top 200px
+    z-index 2
+    box-shadow rgba(#000, 0.33) -8px 8px 16px 0
+    img
+      margin auto
+      padding 0
+      display block
+  .menu-gram
+    position relative
+    z-index 10
+    left -120px
+    top 15px
+    .img-gra
+      img
+        display block
+        //width 400px
+    .gramfn
+      padding-top 40px
+    .lnk-gram
+      position absolute
+      top 0
+      left 300px
+      a
+        position absolute
+        background transparent no-repeat center center
+        size 60px
+        border-radius 1000px
+        border 3px solid rgba(#fff,0.33)
+        cursor pointer
+        box-shadow rgba(#000,.33) 0px 0px 8px 0
+        transition ease-in-out 250ms all
+        &:hover
+          box-shadow rgba($aquamarine,.5) 0 0 16px 0
+          z-index 1
+          .label
+            display block
+            animation loadingShow ease-in-out 250ms
+          
+        .label
+          display none
+          width 200px
+          margin-left 15px
+          position absolute
+          left 100%
+          top 25%
+          background #fff
+          color $textColor
+          text-align center
+          font-size $text_p
+          padding ($paddingBox * .5)
+          box-shadow rgba(#000,.33) 2px 2px 8px 0
+          line-height 1.2em
+          &:before
+            content ''
+            display block
+            position absolute
+            right 100%
+            top 50%
+            margin-top -8px
+            arrow 12px 8px left #fff
+
+        $top= -0px 40px 105px 185px 265px 340px 390px 415px 
+        $lft= -45px 25px 75px 95px 85px 45px -20px -100px 
+        
+        for $v, $i in $top
+          &.lnk_{$i}
+            background-image url('../img/banner/ico_'+$i+'.png')
+            top $v
+            left $lft[$i]
+  
+  .contenido
+    padding-top 80px
+  h1
+    color $titleColor
+  h2
+    color $aquamarine_dark
+    font-size $text_h3
+    margin auto
+    padding-top 0
+    
+  p
+    text-align justify
+
+#DIN-CON
+  position relative
+  z-index 10
+  .wrapper
+    position relative
+    
+  .din-txt
+    background #fff
+    width 40%
+    position absolute
+    box-shadow rgba(#000,.5) -2px 4px 12px 0
+    padding $paddingBox *2
+    right 0
+    top -490px
+    p
+      padding-right 5px
+  .overflower
+    overflow auto
+    overflow-x hidden
+    max-height 380px
+    
