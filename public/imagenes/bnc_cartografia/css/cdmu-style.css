@@ -621,6 +621,10 @@ body.i i {
   max-width: none !important;
   width: auto;
 }
+#CDMU-CONT {
+  font-family: lato, arial, sans-serif;
+  color: #110101;
+}
 #CDMU-CONT .wrapper {
   max-width: 941px;
   margin: auto;
@@ -691,8 +695,20 @@ body.i i {
   left: -120px;
   top: 15px;
 }
-#CDMU-CONT .menu-gram .img-gra img {
+.cont-iframe#CDMU-CONT .menu-gram {
+  z-index: 11;
+  height: 444px;
+}
+#CDMU-CONT .menu-gram .img-gram img {
   display: block;
+}
+.cont-iframe#CDMU-CONT .menu-gram .img-gram {
+  position: absolute;
+  bottom: -50px;
+}
+.cont-iframe#CDMU-CONT .menu-gram .img-gram img {
+  width: 200px;
+  margin-top: 0;
 }
 #CDMU-CONT .menu-gram .gramfn {
   padding-top: 40px;
@@ -702,9 +718,22 @@ body.i i {
   top: 0;
   left: 300px;
 }
+.cont-iframe#CDMU-CONT .menu-gram .lnk-gram {
+  top: auto;
+  bottom: -20px;
+  left: 220px;
+}
 #CDMU-CONT .menu-gram .lnk-gram a {
   position: absolute;
   background: transparent no-repeat center center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
   width: 60px;
   height: 60px;
   -webkit-border-radius: 1000px;
@@ -724,6 +753,13 @@ body.i i {
   -ms-transition: ease-in-out 250ms all;
   -o-transition: ease-in-out 250ms all;
   transition: ease-in-out 250ms all;
+}
+.cont-iframe#CDMU-CONT .menu-gram .lnk-gram a {
+  width: 30px;
+  height: 30px;
+  position: static;
+  top: auto !important;
+  left: auto !important;
 }
 #CDMU-CONT .menu-gram .lnk-gram a:hover {
   -webkit-box-shadow: rgba(25,157,195,0.5) 0 0 16px 0;
@@ -849,10 +885,39 @@ body.i i {
   box-shadow: rgba(0,0,0,0.5) -2px 4px 12px 0;
   padding: 20px;
   right: 0;
-  top: -490px;
+  top: -445px;
+}
+.cont-iframe #DIN-CON .din-txt {
+  width: 100%;
+  max-width: 920px;
+  padding: 10px;
+}
+.cont-iframe #DIN-CON .din-txt h2 {
+  margin-bottom: 10px;
+}
+.cont-iframe #DIN-CON .din-txt:before {
+  content: '';
+  display: block;
+  background: url("../img/banner/bg-iframe.png") no-repeat center top transparent;
+  position: absolute;
+  width: auto;
+  left: 10px;
+  right: 10px;
+  top: 30px;
+  height: 38px;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
 }
 #DIN-CON .din-txt p {
   padding-right: 5px;
+}
+#DIN-CON iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
 }
 #DIN-CON .overflower {
   overflow: auto;
