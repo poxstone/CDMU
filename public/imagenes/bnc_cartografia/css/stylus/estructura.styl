@@ -1,5 +1,4 @@
 html
-    background #f4f2ef
     min-width $wrapper
     
     @media (max-width: $screen-sm)
@@ -63,16 +62,42 @@ body.i i
 #banner #content-inside
     max-width none !important
     width auto
+a.CDMU-close
+    display block
+    float right
+    text-align center
+    width 32px
+    position relative
+    z-index 11
+    height 32px
+    line-height 32px
+    font-size 24px
+    color #333
+    top -10px
+    right -10px
+    cursor pointer
+    transition ease-in-out 250ms all
+    box-shadow rgba(#000,0) 0px 0px 4px 0
+    &:hover
+        box-shadow rgba(#000,.1) 2px 2px 4px 0
+    
 #CDMU-CONT
     font-family $textFont
     color $textColor
+    padding-top 1px
+    margin-top -1px
+    
+    
     .wrapper
         max-width $wrapper - 19
         margin auto
+        height 100%
     .header
         background-color $aquamarine
         background linear-gradient(to bottom, $aquamarine 0%, lighten($aquamarine, 40%) 50%, $aquamarine 100%)
-        height 430px
+        margin-top -1px
+        padding-top 1px
+        height 475px
         position relative
         z-index 1
         &:before
@@ -104,7 +129,7 @@ body.i i
         display block
         position fixed
         right 0
-        top 200px
+        top 227px
         z-index 2
         box-shadow rgba(#000, 0.33) -8px 8px 16px 0
         img
@@ -113,24 +138,30 @@ body.i i
             display block
     .menu-gram
         position relative
-        z-index 10
-        left -120px
-        top 15px
+        z-index 11
+        width 40%
+        margin-left -120px
+        height 100%
+        top 0
         .cont-iframe&
             z-index 11
-            height 444px
-            
+            width 100%
         .img-gram
+            height 100%
             img
                 display block
-            .cont-iframe&
                 position absolute
-                bottom -50px
+                top 0
+                bottom 0
+                height auto
+                margin auto
+                transition ease-in-out 250ms all
+            .cont-iframe&
                 img
                     width 200px
-                    margin-top 0
+                    padding-top 360px
         .gramfn
-            padding-top 40px
+            padding-top 120px
             
                 
         .lnk-gram
@@ -140,7 +171,7 @@ body.i i
             
             .cont-iframe&
                 top auto
-                bottom -20px
+                bottom 0px
                 left 220px
             a
                 position absolute
@@ -153,14 +184,16 @@ body.i i
                 cursor pointer
                 box-shadow rgba(#000,.33) 0px 0px 8px 0
                 transition ease-in-out 250ms all
+                transform scale(0.9)
                 .cont-iframe&
                     size 30px
                     position static
-                    top auto !important
+                    text-outline  auto !important
                     left auto !important
                     
                 &:hover
                     box-shadow rgba($aquamarine,.5) 0 0 16px 0
+                    transform scale(1)
                     z-index 1
                     .label
                         display block
@@ -189,8 +222,8 @@ body.i i
                         margin-top -8px
                         arrow 12px 8px left #fff
 
-                $top= -0px 40px 105px 185px 265px 340px 390px 415px 
-                $lft= -45px 25px 75px 95px 85px 45px -20px -100px 
+                $top= 20px 60px 125px 205px 285px 360px 410px 435px 435px
+                $lft= -40px 20px 70px 90px 80px 40px -15px -95px -180px
                 
                 for $v, $i in $top
                     &.lnk_{$i}
@@ -199,7 +232,12 @@ body.i i
                         left $lft[$i]
     
     .contenido
-        padding-top 80px
+        padding-top 20px
+        .cont-iframe&
+        .cont-mapa&
+            height 100px
+            color transparent
+            opacity 0
     h1
         color $titleColor
     h2
@@ -214,18 +252,31 @@ body.i i
 #DIN-CON
     position relative
     z-index 10
+    height 1px
+    margin-top -1px
     .wrapper
         position relative
-        
+    .intercambiable
+        display none
     .din-txt
         background #fff
         width 40%
         position absolute
-        box-shadow rgba(#000,.5) -2px 4px 12px 0
+        box-shadow rgba(#000,.25) -2px 4px 12px 0
         padding $paddingBox *2
         right 0
-        top -445px
+        bottom 0
+        height 335px
+        margin ($paddingBox *4) auto
+
+        .cont-mapa &
+            bottom auto
+            top -514px
+            height 530px
+            width 60%
         .cont-iframe &
+            height 455px
+            margin auto
             width 100%
             max-width $wrapper - ($paddingBox *4)
             padding $paddingBox
@@ -244,15 +295,43 @@ body.i i
                 background-size 100% auto
                 
         p
-            padding-right 5px
+            line-height 1.2em
+            padding 0 5px 10px 0
+            margin auto
+            text-align left
     iframe
         width 100%
         height 350px
         border none
-        
     .overflower
         overflow auto
         overflow-x hidden
-        max-height 380px
-    
+        max-height 300px
+        .cont-mapa &
+            height 480px
+            max-height none
+            max-width 350px
+            float right
+            margin-left $paddingBox
+            .mapa
+                height 100%
+        .cont-iframe &
+            overflow visible
+            max-height none
+            .mapa
+                overflow visible
+                max-height none
+                height auto
+                padding-left 200px
+    .cont-txt
+        overflow auto
+        .cont-mapa &
+            max-height 480px
+    .mapa
+        width 100%
+        height 300px
+        img
+            width 100%
+            height auto
+        
         

@@ -23,3 +23,38 @@ var util = {
   }
 };
 util.agent_version();
+
+var cdmu_links= {
+    actions: function(){
+        var vars = cdmu_links.vars;
+        
+        vars.$din_lnks.each(function(ind,ele){
+            var $lnk = jQuery(this);
+            $lnk.click(function(e){
+                e.preventDefault();
+                var $showElement = jQuery($lnk.attr('href'));
+                var lnk_class = $showElement.attr('class');
+                lnk_class = 'cont-'+lnk_class.replace(/intercambiable /,'');
+                vars.$din_con.hide();
+                $showElement.show();
+                vars.$cdmu_con.attr('class','').addClass(lnk_class);
+
+            });
+        });
+        
+    },
+    ini: function(){
+        cdmu_links.vars = {};
+        var vars = cdmu_links.vars;
+        vars.$cdmu_con = jQuery('#CDMU-CONT');
+        vars.$din_con = jQuery('#DIN-CON .intercambiable');
+        vars.$din_lnks = jQuery('.lnk-gram a');
+
+        if( vars.$din_con.length && vars.$din_lnks.length ){
+            cdmu_links.actions();
+        }
+    }
+};
+jQuery(function(){cdmu_links.ini();});
+
+links = ['tradicionales','festivales','expresiones','investigacion','bandas','tesauro','vocales','introcuccion',]
