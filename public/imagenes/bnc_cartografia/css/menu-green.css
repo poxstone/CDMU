@@ -367,7 +367,7 @@
     background-position: 0px center;
   }
   100% {
-    background-position: -1013px center;
+    background-position: -1267px center;
   }
 }
 @-webkit-keyframes bg_left {
@@ -375,7 +375,7 @@
     background-position: 0px center;
   }
   100% {
-    background-position: -1013px center;
+    background-position: -1267px center;
   }
 }
 @-o-keyframes bg_left {
@@ -383,7 +383,7 @@
     background-position: 0px center;
   }
   100% {
-    background-position: -1013px center;
+    background-position: -1267px center;
   }
 }
 @keyframes bg_left {
@@ -391,7 +391,7 @@
     background-position: 0px center;
   }
   100% {
-    background-position: -1013px center;
+    background-position: -1267px center;
   }
 }
 @-moz-keyframes opacityAlf {
@@ -1416,6 +1416,7 @@
   margin: 0;
   color: #fff;
   font-weight: normal;
+  font-size: 12px;
 }
 #MENU-CDMU .breadcrumb .breadcrumb-separator {
   color: #fff;
@@ -1513,6 +1514,10 @@
   outline: none;
   border-color: #fff;
 }
+#cont-newmenu .cont-input .form-actions {
+  position: absolute;
+  top: 12px;
+}
 #cont-newmenu .cont-input .form-actions input#edit-submit {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1534,9 +1539,19 @@
   *display: inline;
   background: url("../img/ico-search.png") no-repeat center center transparent;
   cursor: pointer;
+  opacity: 0.66;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=66)";
+  filter: alpha(opacity=66);
+  -webkit-transition: ease-in-out 250ms all;
+  -moz-transition: ease-in-out 250ms all;
+  -ms-transition: ease-in-out 250ms all;
+  -o-transition: ease-in-out 250ms all;
+  transition: ease-in-out 250ms all;
 }
 #cont-newmenu .cont-input .form-actions input#edit-submit:hover {
-  background-color: rgba(255,255,255,0.25);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 #cont-newmenu .block-menu-menu-recursos-digitales {
   background: none;

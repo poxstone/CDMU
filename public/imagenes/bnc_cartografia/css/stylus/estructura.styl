@@ -12,6 +12,16 @@ body.i i
     color purple !important
 
 /*PARCHES DRUPAL*/
+#header-inside
+    &.container_12
+        max-width ($wrapper - 20)
+        a[href="http://www.mincultura.gov.co"] img
+            margin-left 142px !important
+    #header-inside-left
+        margin-left 0
+#navigation
+    width ($wrapper - 20) +1
+    
 #content
     .msie_10 &, .msie_9 &, .msie_8 &
         margin-top -4px
@@ -33,8 +43,8 @@ body.i i
         font-family $titleFont
         text-shadow none
         color $textColor
-        padding $paddingBox 0
-        margin $paddingBox auto
+        padding 20px 0 10px 0
+        margin auto
         font-weight normal
         line-height 1em
 
@@ -44,7 +54,6 @@ body.i i
         > *
             margin-left -1px !important //descuadre respecto al menu
 
-/*PARCHES DRUPAL*/
 #main
     padding-top 0 !important
     .breadcrumb
@@ -56,7 +65,9 @@ body.i i
 #content
     .msie_10 &, .msie_9 &, .msie_8 &
         margin-top -4px
-        
+
+
+
 //CONTENIDO
 #content
 #banner #content-inside
@@ -85,8 +96,7 @@ a.CDMU-close
     font-family $textFont
     color $textColor
     padding-top 1px
-    margin-top -1px
-    
+    margin-top -1px    
     
     .wrapper
         max-width $wrapper - 19
@@ -94,10 +104,10 @@ a.CDMU-close
         height 100%
     .header
         background-color $aquamarine
-        background linear-gradient(to bottom, $aquamarine 0%, lighten($aquamarine, 40%) 50%, $aquamarine 100%)
+        background $aquamarine
         margin-top -1px
         padding-top 1px
-        height 475px
+        height 500px
         position relative
         z-index 1
         &:before
@@ -109,16 +119,16 @@ a.CDMU-close
             z-index 1
             right 0
         &:before
-            top -1px
-            height 65px
+            top 0
+            height 54px
             background url(../img/banner/bg-top.png) center top repeat-x
         &:after
-            bottom -1px
-            height 102px
+            bottom 0
+            height 124px
             background url(../img/banner/bg-bottom.png) center bottom repeat-x
         .bg-figure
             animation bg_left linear 30s infinite
-            background url(../img/banner/bg-aquamarine.png) repeat-x center center transparent
+            background url(../img/banner/bg-00.png) repeat-x center center transparent
             position absolute
             top 0
             left 0
@@ -131,18 +141,22 @@ a.CDMU-close
         right 0
         top 227px
         z-index 2
+        width 110px
+        height 250px
+        background #fff
+        text-align center
         box-shadow rgba(#000, 0.33) -8px 8px 16px 0
         img
             margin auto
             padding 0
             display block
     .menu-gram
-        position relative
+        position absolute
+        bottom 0
         z-index 11
-        width 40%
-        margin-left -120px
-        height 100%
-        top 0
+        height 480px
+        width 480px
+        margin-left -121px
         .cont-iframe&
             z-index 11
             width 100%
@@ -160,14 +174,13 @@ a.CDMU-close
                 img
                     width 200px
                     padding-top 360px
-        .gramfn
-            padding-top 120px
-            
                 
         .lnk-gram
             position absolute
             top 0
-            left 300px
+            left 0
+            width 100%
+            height 100%
             
             .cont-iframe&
                 top auto
@@ -222,8 +235,8 @@ a.CDMU-close
                         margin-top -8px
                         arrow 12px 8px left #fff
 
-                $top= 20px 60px 125px 205px 285px 360px 410px 435px 435px
-                $lft= -40px 20px 70px 90px 80px 40px -15px -95px -180px
+                $top= -2px 31px 88px 161px 239px 312px 369px 402px 375px
+                $lft= 245px 317px 371px 400px 399px 371px 316px 246px 80px
                 
                 for $v, $i in $top
                     &.lnk_{$i}
@@ -232,7 +245,7 @@ a.CDMU-close
                         left $lft[$i]
     
     .contenido
-        padding-top 20px
+        padding-top 10px
         .cont-iframe&
         .cont-mapa&
             height 100px
@@ -240,6 +253,9 @@ a.CDMU-close
             opacity 0
     h1
         color $titleColor
+        padding 20px 0 10px 0
+        margin auto
+
     h2
         color $aquamarine_dark
         font-size $text_h3
@@ -248,6 +264,8 @@ a.CDMU-close
         
     p
         text-align justify
+        padding 10px 0
+        margin auto
 
 #DIN-CON
     position relative
