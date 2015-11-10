@@ -84,7 +84,7 @@ a.CDMU-close
     line-height 32px
     font-size 24px
     color #333
-    top -10px
+    top 5px
     right -10px
     cursor pointer
     transition ease-in-out 250ms all
@@ -96,7 +96,7 @@ a.CDMU-close
     font-family $textFont
     color $textColor
     padding-top 1px
-    margin-top -1px    
+    margin-top -1px
     
     .wrapper
         max-width $wrapper - 19
@@ -157,11 +157,11 @@ a.CDMU-close
         height 480px
         width 480px
         margin-left -121px
-        .cont-iframe&
-            z-index 11
-            width 100%
+        transition ease-in-out all 500ms
+        
         .img-gram
             height 100%
+            transition ease-in-out all 500ms
             img
                 display block
                 position absolute
@@ -170,10 +170,6 @@ a.CDMU-close
                 height auto
                 margin auto
                 transition ease-in-out 250ms all
-            .cont-iframe&
-                img
-                    width 200px
-                    padding-top 360px
                 
         .lnk-gram
             position absolute
@@ -182,10 +178,6 @@ a.CDMU-close
             width 100%
             height 100%
             
-            .cont-iframe&
-                top auto
-                bottom 0px
-                left 220px
             a
                 position absolute
                 background transparent no-repeat center center
@@ -198,11 +190,6 @@ a.CDMU-close
                 box-shadow rgba(#000,.33) 0px 0px 8px 0
                 transition ease-in-out 250ms all
                 transform scale(0.9)
-                .cont-iframe&
-                    size 30px
-                    position static
-                    text-outline  auto !important
-                    left auto !important
                     
                 &:hover
                     box-shadow rgba($aquamarine,.5) 0 0 16px 0
@@ -246,11 +233,6 @@ a.CDMU-close
     
     .contenido
         padding-top 10px
-        .cont-iframe&
-        .cont-mapa&
-            height 100px
-            color transparent
-            opacity 0
     h1
         color $titleColor
         padding 20px 0 10px 0
@@ -258,14 +240,72 @@ a.CDMU-close
 
     h2
         color $aquamarine_dark
-        font-size $text_h3
-        margin auto
+        font-size $text_h2
+        margin $paddingBox auto
         padding-top 0
         
     p
         text-align justify
         padding 10px 0
         margin auto
+    
+    //MINIMIZED
+    &.cont-mapa
+    &.cont-iframe
+    &.cont-introduccion
+        //MENU
+        .menu-gram
+            width 240px
+            height 380px
+            img
+                top auto
+                bottom 42px
+        .lnk-gram a
+            position static
+            width 30px
+            height 30px
+            display block
+            float right
+            clear both
+            border-width 1px
+            margin-bottom 3%
+            margin-right 40px
+            box-shadow none
+        .din-txt
+            padding-left 140px
+            
+    &.cont-mapa
+        .din-txt .overflower
+            float right
+            .mapa
+                margin-left $paddingBox *2
+                width 450px
+                //height 525px
+    &.cont-iframe
+        .din-txt 
+            padding-left 121px
+            .overflower .mapa
+                width 100%
+            .mapa
+                padding-top 1px
+                padding-bottom 1px
+                margin-bottom $paddingBox
+                
+                &:before
+                &:after
+                    content ''
+                    display block
+                    background $gray4
+                    width 95%
+                    height 1px
+                    margin auto
+                    
+            iframe
+                background #fff
+                width 100%
+                height 750px
+            
+        
 
 #DIN-CON
     position relative
@@ -278,45 +318,21 @@ a.CDMU-close
         display none
     .din-txt
         background #fff
-        width 40%
+        width auto
+        height auto
         position absolute
         box-shadow rgba(#000,.25) -2px 4px 12px 0
         padding $paddingBox *2
         right 0
-        bottom 0
-        height 335px
-        margin ($paddingBox *4) auto
-
-        .cont-mapa &
-            bottom auto
-            top -514px
-            height 530px
-            width 60%
-        .cont-iframe &
-            height 455px
-            margin auto
-            width 100%
-            max-width $wrapper - ($paddingBox *4)
-            padding $paddingBox
-            h2
-                margin-bottom 10px
-            &:before
-                content ''
-                display block
-                background url(../img/banner/bg-iframe.png) no-repeat center top transparent
-                position absolute
-                width auto
-                left $paddingBox
-                right $paddingBox
-                top 30px
-                height 38px
-                background-size 100% auto
+        top 0
+        min-height 500px
+        transition ease-in-out all 500ms
                 
         p
             line-height 1.2em
-            padding 0 5px 10px 0
+            padding 0 0 10px 0
             margin auto
-            text-align left
+            text-align justify
     iframe
         width 100%
         height 350px
@@ -324,30 +340,9 @@ a.CDMU-close
     .overflower
         overflow auto
         overflow-x hidden
-        max-height 300px
-        .cont-mapa &
-            height 480px
-            max-height none
-            max-width 350px
-            float right
-            margin-left $paddingBox
-            .mapa
-                height 100%
-        .cont-iframe &
-            overflow visible
-            max-height none
-            .mapa
-                overflow visible
-                max-height none
-                height auto
-                padding-left 200px
+        transition ease-in-out all 500ms
     .cont-txt
         overflow auto
-        .cont-mapa &
-            max-height 480px
-    .mapa
-        width 100%
-        height 300px
         img
             width 100%
             height auto
