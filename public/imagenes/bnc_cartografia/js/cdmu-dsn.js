@@ -25,36 +25,105 @@ var util = {
 util.agent_version();
 
 var cdmu_links= {
+    lnk_events: function(link,option){
+        var $lnk = jQuery(link);
+        var vars = cdmu_links.vars;
+        var lnk_id = $lnk.attr('href').replace('#','') || null;
+        var $sectionShow = jQuery('#'+lnk_id);
+        var lnk_class = $sectionShow.attr('class').match(/is-\w+/)[0];
+        
+        if(option=='click'){
+            
+            lnk_class = lnk_class +' '+ lnk_id;//add id secction
+            
+            vars.$din_sections.removeClass('show').addClass('hide');//hide all
+            $sectionShow.removeClass('hide').addClass('show');//show section
+            vars.$cdmu_general.attr('class','').addClass(lnk_class);//add class from id section
+            
+        }else if(option=='mouseenter'){
+            
+            vars.$cdmu_general.addClass( 'hover_'+lnk_id );//add class from id section
+            
+        }else if(option=='mouseleave'){
+            var contGent_class = vars.$cdmu_general.attr('class').match(/hover_\w+/) || '';
+            
+            if( contGent_class ){
+                contGent_class = contGent_class[0];
+            }
+            
+            vars.$cdmu_general.removeClass(contGent_class);
+            
+        }else if(option=='quit'){
+            var contGent_class = vars.$cdmu_general.attr('class','');
+            
+        }
+        
+    },
+    quit: function(link,option){
+        
+        var vars = cdmu_links.vars;
+        vars.$din_sections.removeClass('show').addClass('hide');//hide all
+        vars.$cdmu_general.attr('class','');
+        
+    },
     actions: function(){
         var vars = cdmu_links.vars;
         
         vars.$din_lnks.each(function(ind,ele){
             var $lnk = jQuery(this);
+            
+            
+            $lnk.hover(
+              function(e){
+                cdmu_links.lnk_events( $lnk, 'mouseenter' );
+              
+              },function(e){
+                cdmu_links.lnk_events( $lnk, 'mouseleave' );
+              
+            });
+            
+            
             $lnk.click(function(e){
                 e.preventDefault();
-                var $showElement = jQuery($lnk.attr('href'));
-                var lnk_class = $showElement.attr('class');
-                lnk_class = 'cont-'+lnk_class.replace(/intercambiable /,'');
-                vars.$din_con.hide();
-                $showElement.show();
-                vars.$cdmu_con.attr('class','').addClass(lnk_class);
+                
+                cdmu_links.lnk_events( $lnk, 'click' );
 
             });
         });
+        
         
     },
     ini: function(){
         cdmu_links.vars = {};
         var vars = cdmu_links.vars;
-        vars.$cdmu_con = jQuery('#CDMU-CONT');
-        vars.$din_con = jQuery('#DIN-CON .intercambiable');
+        vars.$cdmu_general = jQuery('#CDMU-CONT');
+        vars.$din_sections = jQuery('#DIN-CON .intercambiable');
         vars.$din_lnks = jQuery('.lnk-gram a');
+        vars.$lnks_quit = jQuery('a.CDMU-close');
+        
 
-        if( vars.$din_con.length && vars.$din_lnks.length ){
+        if( vars.$din_sections.length && vars.$din_lnks.length ){
             cdmu_links.actions();
         }
     }
 };
 jQuery(function(){cdmu_links.ini();});
 
-links = ['tradicionales','festivales','expresiones','investigacion','bandas','tesauro','vocales','introcuccion',]
+//Preload images
+var loadsImages= {
+    img: [],
+    ini: function(){
+        
+        var url = jQuery('script[src*="cdmu-dsn.js"]').attr('src').replace('js/cdmu-dsn.js','img/banner/');
+        
+        
+        for(i=0; i<=8; i++){
+            var img = document.createElement('img');
+            loadsImages.img.push(img);
+            img.src = url+'bg-0'+i+'.png';
+            
+        }
+
+    }  
+};jQuery(function(){loadsImages.ini();});
+

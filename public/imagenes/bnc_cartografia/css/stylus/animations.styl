@@ -2,96 +2,11 @@
 @import 'mixin.styl'
 @import 'variables.styl'
 
-@keyframes bg_top {
-	0% {
-		transform rotate(0deg)
-	}
-	100% {
-		transform rotate(30deg)
-	}
-}
-
-@keyframes bg_downUp {
-	0% {
-		background-position center 0
-	}
-	100% {
-		background-position center -254px
-	}
-}
-
-@keyframes bg_left {
-	0% {
-		background-position 0px center
-	}
-	100% {
-		background-position -1267px center
-	}
-}
-
-@keyframes opacityAlf {
-	0% {
-		opacity 0.5
-		transform scale(1)
-	}
-	50% {
-		opacity 1
-		transform scale(1.25)
-	}
-	100%{
-		opacity 0.5
-		transform scale(1)
-	}
-}
-
-@keyframes upDown {
-	0% {
-		transform translate(0, 0)
-	}
-	50% {
-		transform translate(0, 10px)
-	}
-	100% {
-		transform translate(0, 0)
-	}
-}
-@keyframes rotate_m {
-	0% {
-		transform rotate(-15deg)
-	}
-	50% {
-		transform rotate(15deg)
-	}
-	100% {
-		transform rotate(-15deg)
-	}
-}
-@keyframes rotate_f {
-	0% {
-		transform rotate(0deg)
-	}
-	50% {
-		transform rotate(180deg)
-	}
-	100% {
-		transform rotate(364deg)
-	}
-}
-@keyframes leftRight {
-	0% {
-		transform translate(0, 0)
-	}
-	50% {
-		transform translate(10px, 0)
-	}
-	100% {
-		transform translate(0, 0)
-	}
-}
-@keyframes menuDown {
+//USE
+@keyframes openRight {
 	0% {
 		opacity 0
-		transform translateY(-10px)
+		transform translateY(-20px)
 	}
 	75% {
 		opacity 1
@@ -100,19 +15,6 @@
 		transform translateY(0px)
 	}
 }
-@keyframes menuUp {
-	0% {
-		opacity 0
-		transform translateY(10px)
-	}
-	75% {
-		opacity 1
-	}
-	100% {
-		transform translateY(0px)
-	}
-}
-
 //USE
 @keyframes loadingShow {
 	0% {
@@ -123,34 +25,11 @@
 	}
 }
 //USE
-@keyframes loadingShow_int {
+@keyframes bg_left {
 	0% {
-		transform translateY(20%)
+		background-position 0px center
 	}
 	100% {
-		transform translateY(0%)
-	}
-}
-//USE
-@keyframes loadingHide {
-	0% {
-		opacity 1
-	}
-	100% {
-		opacity 0
-	}
-}
-
-/*FOOTER*/
-@keyframes cargando_open {
-	0% {
-		opacity 0
-		transform translateY(-10px)
-	}
-	75% {
-		opacity 1
-	}
-	100% {
-		transform translateY(0)
+		background-position -1267px center
 	}
 }
