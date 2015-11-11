@@ -1144,6 +1144,11 @@ a.CDMU-close:hover {
   height: 54px;
   background: url("../img/banner/bg-top.png") center top repeat-x;
 }
+@media (max-width: 768px) {
+  #CDMU-CONT .header:before {
+    display: none;
+  }
+}
 #CDMU-CONT .header:after {
   bottom: 0;
   height: 124px;
@@ -1293,6 +1298,11 @@ a.CDMU-close:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: ease-in-out all 250ms;
+  -moz-transition: ease-in-out all 250ms;
+  -ms-transition: ease-in-out all 250ms;
+  -o-transition: ease-in-out all 250ms;
+  transition: ease-in-out all 250ms;
 }
 #CDMU-CONT .menu-gram .lnk-gram a {
   position: absolute;
@@ -1434,16 +1444,92 @@ a.CDMU-close:hover {
 @media (max-width: 768px) {
   #CDMU-CONT .menu-gram {
     width: 100%;
-    margin-left: -110px;
+    margin-left: 0;
   }
   #CDMU-CONT .menu-gram img {
     min-width: 320px;
+    margin-left: -110px !important;
   }
   #CDMU-CONT .menu-gram .lnk-gram {
     left: auto;
     right: 0;
-    width: 400px;
+    width: 80%;
     top: 20px;
+    margin-right: 0;
+    height: auto;
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+    max-width: 250px;
+  }
+  #CDMU-CONT .menu-gram .lnk-gram a {
+    position: relative;
+    left: 0 !important;
+    display: block;
+    top: 0 !important;
+    min-height: 36px;
+    width: auto;
+    text-decoration: none;
+    height: auto;
+    -webkit-background-size: 36px auto;
+    -moz-background-size: 36px auto;
+    -ms-background-size: 36px auto;
+    -o-background-size: 36px auto;
+    background-size: 36px auto;
+    border: none;
+    line-height: 24px;
+    margin-bottom: 5px;
+    background-color: rgba(255,255,255,0.75);
+    background-position: 10px center;
+    float: none;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    padding: 5px 0;
+  }
+  #CDMU-CONT .menu-gram .lnk-gram a:hover .label {
+    opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+  #CDMU-CONT .menu-gram .lnk-gram a .label {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    background: 0;
+    text-align: left;
+    color: #333;
+    padding: 0;
+    top: 0;
+    padding-left: 10px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: sub;
+    line-height: 1.2em;
+    left: 36px;
+    width: 80%;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -ms-animation: none !important;
+    -o-animation: none !important;
+    animation: none !important;
+  }
+  #CDMU-CONT .menu-gram .lnk-gram a .label:before {
+    display: none;
   }
   .contenido {
     padding: 0 20px;
@@ -1484,6 +1570,7 @@ a.CDMU-close:hover {
 #CDMU-CONT.is-normal .menu-gram img {
   top: auto;
   bottom: 42px;
+  margin-left: 0 !important;
 }
 #CDMU-CONT.is-mapa .lnk-gram a,
 #CDMU-CONT.is-iframe .lnk-gram a,
@@ -1534,18 +1621,39 @@ a.CDMU-close:hover {
     bottom: auto;
     top: 10px;
   }
+  #CDMU-CONT.is-mapa .menu-gram:hover .lnk-gram,
+  #CDMU-CONT.is-iframe .menu-gram:hover .lnk-gram,
+  #CDMU-CONT.is-normal .menu-gram:hover .lnk-gram {
+    display: block;
+    width: 320px;
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
   #CDMU-CONT.is-mapa .lnk-gram,
   #CDMU-CONT.is-iframe .lnk-gram,
   #CDMU-CONT.is-normal .lnk-gram {
-    left: 15px;
-    width: auto;
-    top: 120px;
+    right: auto;
+    left: 0;
+    background: #fff;
+    -webkit-box-shadow: rgba(0,0,0,0.25) 2px 2px 8px 0;
+    -moz-box-shadow: rgba(0,0,0,0.25) 2px 2px 8px 0;
+    -ms-box-shadow: rgba(0,0,0,0.25) 2px 2px 8px 0;
+    -o-box-shadow: rgba(0,0,0,0.25) 2px 2px 8px 0;
+    box-shadow: rgba(0,0,0,0.25) 2px 2px 8px 0;
+    top: 2px;
+    width: 20px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
   }
   #CDMU-CONT.is-mapa .lnk-gram a,
   #CDMU-CONT.is-iframe .lnk-gram a,
   #CDMU-CONT.is-normal .lnk-gram a {
-    margin-right: 15px;
-    min-width: 0;
+    float: none;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-right: 0;
   }
   #CDMU-CONT.is-mapa .din-txt,
   #CDMU-CONT.is-iframe .din-txt,

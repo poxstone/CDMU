@@ -124,6 +124,9 @@ a.CDMU-close
             top 0
             height 54px
             background url(../img/banner/bg-top.png) center top repeat-x
+            @media(max-width $sc-sm)
+                display none
+                
         &:after
             bottom 0
             height 124px
@@ -203,6 +206,7 @@ a.CDMU-close
             left 0
             width 100%
             height 100%
+            transition ease-in-out all 250ms
             
             a
                 position absolute
@@ -259,15 +263,62 @@ a.CDMU-close
     
         @media( max-width $sc-sm)
             width 100%
-            margin-left -110px
+            margin-left 0
             img
                 min-width 320px
+                margin-left -110px !important
             
             .lnk-gram
                 left auto
                 right 0
-                width 400px
+                width 80%
                 top 20px
+                margin-right 0
+                height auto
+                background rgba(255,255,255,0.5)
+                padding 20px
+                max-width 250px
+                a
+                    position relative
+                    left 0 !important
+                    display: block
+                    top 0 !important
+                    min-height: 36px
+                    width auto
+                    text-decoration: none
+                    height auto
+                    background-size 36px auto
+                    border none
+                    line-height 24px
+                    margin-bottom 5px
+                    background-color rgba(255,255,255,0.75)
+                    background-position 10px center
+                    float none
+                    transform: scale(1)
+                    border-radius 0
+                    padding 5px 0
+                    &:hover .label
+                        opacity .5
+                        display inline-block
+                        
+                    .label
+                        box-shadow none
+                        background 0
+                        text-align left
+                        color #333
+                        padding 0
+                        top 0
+                        padding-left: 10px
+                        font-weight bold
+                        position relative
+                        display inline-block
+                        vertical-align sub
+                        line-height 1.2em
+                        left 36px
+                        width 80%
+                        animation none !important
+                        &:before
+                            display none
             / .contenido
                 padding 0 ($paddingBox *2)
                 
@@ -302,6 +353,7 @@ a.CDMU-close
             img
                 top auto
                 bottom 42px
+                margin-left: 0 !important;
                 
         .lnk-gram a
             position static
@@ -331,13 +383,24 @@ a.CDMU-close
                     min-width 75px
                     bottom auto
                     top $paddingBox
+                &:hover .lnk-gram
+                    display block
+                    width 320px
+                    opacity 1
             .lnk-gram
-                left 15px
-                width auto
-                top 120px
+                right auto
+                left 0
+                background #fff
+                box-shadow rgba(0,0,0,0.25) 2px 2px 8px 0
+                top 2px
+                //display none
+                width 20px
+                opacity 0
                 a
-                    margin-right 15px 
-                    min-width 0
+                    float none
+                    width 100%
+                    margin-bottom 5px
+                    margin-right 0
             .din-txt
                 padding-left 60px
                 box-shadow none

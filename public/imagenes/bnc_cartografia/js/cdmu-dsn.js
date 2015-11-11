@@ -88,6 +88,8 @@ var cdmu_links= {
                 e.preventDefault();
                 
                 cdmu_links.lnk_events( $lnk, 'click' );
+                console.log(vars.$a_focusme)
+                vars.$a_focusme.focus();
 
             });
         });
@@ -101,6 +103,7 @@ var cdmu_links= {
         vars.$din_sections = jQuery('#DIN-CON .intercambiable');
         vars.$din_lnks = jQuery('.lnk-gram a');
         vars.$lnks_quit = jQuery('a.CDMU-close');
+        vars.$a_focusme = jQuery('a.focusme');
         
 
         if( vars.$din_sections.length && vars.$din_lnks.length ){

@@ -1,4 +1,4 @@
-//extends layout
+extends layout
 extends layout_only
 
 block head
@@ -12,6 +12,7 @@ block content
 	link#stylo(rel="stylesheet",href="#{rdir}/imagenes/bnc_cartografia/css/cdmu-style.css")
 	script(src="#{rdir}/imagenes/bnc_cartografia/js/cdmu-dsn.js")
 	div#CDMU-CONT.not-class
+		a.focuseme(href="#")
 		div.header
 			div.bg-figure
 			div.wrapper
