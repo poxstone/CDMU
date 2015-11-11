@@ -1,11 +1,13 @@
 html
     min-width $wrapper
     
-    @media (max-width: $screen-sm)
+    @media (max-width: $sc-sm)
         min-width 0
 html
 body
     background #fff
+    padding 0
+    margin 0
     &.show-popUp
         overflow hidden !important
 body.i i
@@ -36,7 +38,7 @@ body.i i
     &, p
         font-size $fontSize
         line-height 20px
-        @media (max-width: $screen-sm)
+        @media (max-width $sc-sm)
             line-height 15px
 
     h1,h2,h3,h4,h5,h6
@@ -155,11 +157,22 @@ a.CDMU-close
         height 250px
         background #fff
         text-align center
+        transition all ease-in-out 250ms
         box-shadow rgba(#000, 0.33) -8px 8px 16px 0
         img
             margin auto
             padding 0
             display block
+        @media(max-width $sc-sm)
+            opacity .5
+            width 55px
+            height 125px
+            img
+                width 100%
+            &:hover
+                opacity 1
+                width 110px
+                height 250px
     .menu-gram
         position absolute
         bottom 0
@@ -179,7 +192,10 @@ a.CDMU-close
                 bottom 0
                 height auto
                 margin auto
+                max-width 100%
                 transition ease-in-out 250ms all
+            .is-mapa&{}
+            
                 
         .lnk-gram
             position absolute
@@ -241,8 +257,24 @@ a.CDMU-close
                         top $v
                         left $lft[$i]
     
+        @media( max-width $sc-sm)
+            width 100%
+            margin-left -110px
+            img
+                min-width 320px
+            
+            .lnk-gram
+                left auto
+                right 0
+                width 400px
+                top 20px
+            / .contenido
+                padding 0 ($paddingBox *2)
+                
+                
     .contenido
         padding-top 10px
+        transition ease-in-out 500ms all
     h1
         color $titleColor
         padding 20px 0 10px 0
@@ -270,6 +302,7 @@ a.CDMU-close
             img
                 top auto
                 bottom 42px
+                
         .lnk-gram a
             position static
             width 30px
@@ -283,6 +316,35 @@ a.CDMU-close
             box-shadow none
         .din-txt
             padding-left 140px
+        .contenido
+            opacity 0
+        @media(max-width $sc-sm)
+            .menu-gram
+                width 60px
+                height 450px
+                position absolute//absolute/fixed
+                margin-left 0
+                top 0
+                img
+                    max-width none
+                    width 100%
+                    min-width 75px
+                    bottom auto
+                    top $paddingBox
+            .lnk-gram
+                left 15px
+                width auto
+                top 120px
+                a
+                    margin-right 15px 
+                    min-width 0
+            .din-txt
+                padding-left 60px
+                box-shadow none
+            .contenido
+                display none
+                
+                
             
     &.is-mapa
         .din-txt .overflower
@@ -291,6 +353,15 @@ a.CDMU-close
                 margin-left $paddingBox *2
                 width 450px
                 //height 525px
+        @media(max-width $sc-sm)
+            .din-txt .overflower
+                float none
+                .mapa
+                    width 100%
+                    margin-left 0
+                    img
+                        width 100%
+        
     &.is-iframe
         .din-txt 
             padding-left 121px
@@ -300,6 +371,7 @@ a.CDMU-close
                 padding-top 1px
                 padding-bottom 1px
                 margin-bottom $paddingBox
+                
                 
                 &:before
                 &:after
@@ -314,6 +386,15 @@ a.CDMU-close
                 background #fff
                 width 100%
                 height 750px
+
+        @media(max-width $sc-sm)
+            .din-txt
+                padding-left 60px
+                .mapa
+                    padding 0
+                iframe
+                    height 400px
+                    border 1px solid $gray4
             
         
 

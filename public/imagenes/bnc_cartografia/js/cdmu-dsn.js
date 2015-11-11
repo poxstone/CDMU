@@ -1,4 +1,5 @@
 ;
+//$.noConflict();
 var util = {
   agent_version : function(){
     var nav_list = ['MSIE_11p','MSIE','Firefox','Chrome','Opera','Safari'];

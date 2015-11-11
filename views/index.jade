@@ -1,7 +1,5 @@
--if (qr.html == 1)
-	extends layout_only
--else
-	extends layout
+//extends layout
+extends layout_only
 
 block head
 	include header
@@ -9,7 +7,7 @@ block head
 block content
 	-titles= ['Músicas Tradicionales','Festivales de Música','Expresiones sonoras y musicales Comunidades Indigenas','Investigación y Documentación','Bandas','Tesauro','Expresiones Vocales','A manera de introducción']
 	-links = ['tradicionales','festivales','expresiones','investigacion','bandas','tesauro','vocales','introcuccion',]
-	-//script(src="#{rdir}/imagenes/bnc_cartografia/js/jquery.min.js")
+	script(src="#{rdir}/imagenes/bnc_cartografia/js/jquery.min.js")
 	script(src="//maps.googleapis.com/maps/api/js")
 	link#stylo(rel="stylesheet",href="#{rdir}/imagenes/bnc_cartografia/css/cdmu-style.css")
 	script(src="#{rdir}/imagenes/bnc_cartografia/js/cdmu-dsn.js")
