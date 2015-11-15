@@ -40,6 +40,8 @@ var cdmu_links= {
             vars.$din_sections.removeClass('show').addClass('hide');//hide all
             $sectionShow.removeClass('hide').addClass('show');//show section
             vars.$cdmu_general.attr('class','').addClass(lnk_class);//add class from id section
+            vars.$cont_menu.removeClass('hover');//close menu
+            location.hash = lnk_id;
             
         }else if(option=='mouseenter'){
             
@@ -60,11 +62,47 @@ var cdmu_links= {
         }
         
     },
+    togglMenu: function(este, evento){
+        
+        var vars = cdmu_links.vars;
+        
+        if( vars.$cdmu_general.outerWidth() <= 768 ){
+            
+            if( vars.$cont_menu.is('.hover') ){
+               
+                vars.$cont_menu.removeClass('hover');
+                
+            }else{
+                
+                vars.$cont_menu.addClass('hover');
+                if( !document.isAction_menu ){
+                    
+                    jQuery(document).click(function(e){
+                        
+                        var $target = jQuery(e.target);
+                        
+                        if( !$target.closest( '.menu-gram' ).length ){
+                            
+                            vars.$cont_menu.removeClass('hover');
+
+                        }
+                    });
+                    document.isAction_menu= true;
+                    
+                }
+                
+                
+            }
+            
+        }
+        
+    },
     quit: function(link,option){
         
         var vars = cdmu_links.vars;
         vars.$din_sections.removeClass('show').addClass('hide');//hide all
         vars.$cdmu_general.attr('class','');
+        location.hash = '';
         
     },
     actions: function(){
@@ -83,17 +121,19 @@ var cdmu_links= {
               
             });
             
-            
             $lnk.click(function(e){
                 e.preventDefault();
-                
                 cdmu_links.lnk_events( $lnk, 'click' );
-                console.log(vars.$a_focusme)
-                vars.$a_focusme.focus();
-
+                
             });
         });
         
+    },
+    autoCharge: function(){
+        var vars = cdmu_links.vars;
+        vars.url = location.hash;
+        var $lnk = vars.$din_lnks.filter('[href*="'+vars.url+'"]');
+        $lnk.click();
         
     },
     ini: function(){
@@ -103,11 +143,12 @@ var cdmu_links= {
         vars.$din_sections = jQuery('#DIN-CON .intercambiable');
         vars.$din_lnks = jQuery('.lnk-gram a');
         vars.$lnks_quit = jQuery('a.CDMU-close');
-        vars.$a_focusme = jQuery('a.focusme');
+        vars.$cont_menu = jQuery('.menu-gram');
         
 
         if( vars.$din_sections.length && vars.$din_lnks.length ){
             cdmu_links.actions();
+            cdmu_links.autoCharge();
         }
     }
 };
@@ -119,7 +160,6 @@ var loadsImages= {
     ini: function(){
         
         var url = jQuery('script[src*="cdmu-dsn.js"]').attr('src').replace('js/cdmu-dsn.js','img/banner/');
-        
         
         for(i=0; i<=8; i++){
             var img = document.createElement('img');

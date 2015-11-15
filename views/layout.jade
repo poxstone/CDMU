@@ -1,82 +1,96 @@
-doctype html
-html(xmlns='http://www.w3.org/1999/xhtml', xml:lang='es', version='XHTML+RDFa 1.0', dir='ltr', xmlns:content='http://purl.org/rss/1.0/modules/content/', xmlns:dc='http://purl.org/dc/terms/', xmlns:foaf='http://xmlns.com/foaf/0.1/', xmlns:og='http://ogp.me/ns#', xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#', xmlns:sioc='http://rdfs.org/sioc/ns#', xmlns:sioct='http://rdfs.org/sioc/types#', xmlns:skos='http://www.w3.org/2004/02/skos/core#', xmlns:xsd='http://www.w3.org/2001/XMLSchema#')
-  head(profile='http://www.w3.org/1999/xhtml/vocab')
-    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel='shortcut icon', href='http://www.bibliotecanacional.gov.co/misc/favicon.ico', type='image/vnd.microsoft.icon')
-    meta(content='Cartografía de prácticas musicales en Colombia', about='http://www.bibliotecanacional.gov.co/content/cartograf%C3%AD-de-pr%C3%A1cticas-musicales-en-colombia', property='dc:title')
-    link(rel='canonical', href='http://www.bibliotecanacional.gov.co/content/cartograf%C3%AD-de-pr%C3%A1cticas-musicales-en-colombia')
-    meta(name='Generator', content='Drupal 7 (http://drupal.org)')
-    link(rel='shortlink', href='http://www.bibliotecanacional.gov.co/node/134')
-    meta(http-equiv='Cache-Control', content='no-cache, no-store, must-revalidate')
-    meta(http-equiv='Pragma', content='no-cache')
-    meta(http-equiv='Expires', content='0')
-    title
-      | Cartografía de prácticas musicales en Colombia | Biblioteca Nacional de Colombia
-    //
-    style(type='text/css', media='all').
-      @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/modules/system/system.base.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/modules/system/system.menus.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/modules/system/system.messages.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/modules/system/system.theme.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.accordion.min.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.button.min.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.resizable.min.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.dialog.min.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.tabs.min.css?nwn3dp");
-    //
+-if (qr.html==1)
+
+  doctype html
+  html(lang='en')
+    head
+      title Jade
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      //block head
+  body
+    block content
+    
+-else
+
+  doctype
+  html(xmlns='http://www.w3.org/1999/xhtml', xml:lang='es', version='XHTML+RDFa 1.0', dir='ltr', xmlns:content='http://purl.org/rss/1.0/modules/content/', xmlns:dc='http://purl.org/dc/terms/', xmlns:foaf='http://xmlns.com/foaf/0.1/', xmlns:og='http://ogp.me/ns#', xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#', xmlns:sioc='http://rdfs.org/sioc/ns#', xmlns:sioct='http://rdfs.org/sioc/types#', xmlns:skos='http://www.w3.org/2004/02/skos/core#', xmlns:xsd='http://www.w3.org/2001/XMLSchema#')
+    head(profile='http://www.w3.org/1999/xhtml/vocab')
+      meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      link(rel='shortcut icon', href='http://www.bibliotecanacional.gov.co/misc/favicon.ico', type='image/vnd.microsoft.icon')
+      meta(content='Cartografía de prácticas musicales en Colombia', about='http://www.bibliotecanacional.gov.co/content/cartograf%C3%AD-de-pr%C3%A1cticas-musicales-en-colombia', property='dc:title')
+      link(rel='canonical', href='http://www.bibliotecanacional.gov.co/content/cartograf%C3%AD-de-pr%C3%A1cticas-musicales-en-colombia')
+      meta(name='Generator', content='Drupal 7 (http://drupal.org)')
+      link(rel='shortlink', href='http://www.bibliotecanacional.gov.co/node/134')
+      meta(http-equiv='Cache-Control', content='no-cache, no-store, must-revalidate')
+      meta(http-equiv='Pragma', content='no-cache')
+      meta(http-equiv='Expires', content='0')
+      title
+        | Cartografía de prácticas musicales en Colombia | Biblioteca Nacional de Colombia
+      //
       style(type='text/css', media='all').
-        @import url("http://www.bibliotecanacional.gov.co/modules/aggregator/aggregator.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/date/date_api/date.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/modules/field/theme/field.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/modules/node/node.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/modules/search/search.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/modules/user/user.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/youtube/css/youtube.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/views/css/views.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/modules/system/system.base.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/modules/system/system.menus.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/modules/system/system.messages.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/modules/system/system.theme.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.accordion.min.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.button.min.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.resizable.min.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.dialog.min.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.tabs.min.css?nwn3dp");
+      //
+        style(type='text/css', media='all').
+          @import url("http://www.bibliotecanacional.gov.co/modules/aggregator/aggregator.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/date/date_api/date.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/modules/field/theme/field.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/modules/node/node.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/modules/search/search.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/modules/user/user.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/youtube/css/youtube.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/views/css/views.css?nwn3dp");
+        style(type='text/css', media='all').
+          @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/ckeditor/ckeditor.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/colorbox/styles/default/colorbox_style.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/ctools/css/ctools.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/panels/css/panels.css?nwn3dp");
+          @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/dialog/jquery_ui_filter_dialog.css?nwn3dp");
+      style(type='text/css', media='all and (min-width: 980px)').
+        @import url("http://www.bibliotecanacional.gov.co/themes/corporateclean/css/960.css?nwn3dp");
+      //
+        style(type='text/css', media='all and (max-width: 760px)').
+          @import url("http://www.bibliotecanacional.gov.co/themes/corporateclean/css/mobile.css?nwn3dp");
       style(type='text/css', media='all').
-        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/ckeditor/ckeditor.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/colorbox/styles/default/colorbox_style.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/ctools/css/ctools.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/panels/css/panels.css?nwn3dp");
-        @import url("http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/dialog/jquery_ui_filter_dialog.css?nwn3dp");
-    style(type='text/css', media='all and (min-width: 980px)').
-      @import url("http://www.bibliotecanacional.gov.co/themes/corporateclean/css/960.css?nwn3dp");
-    //
-      style(type='text/css', media='all and (max-width: 760px)').
-        @import url("http://www.bibliotecanacional.gov.co/themes/corporateclean/css/mobile.css?nwn3dp");
-    style(type='text/css', media='all').
-      @import url("http://www.bibliotecanacional.gov.co/themes/corporateclean/style.css?nwn3dp");
-      @import url("http://www.bibliotecanacional.gov.co/sites/default/files/color/corporateclean-121ef932/colors.css?nwn3dp");
-    script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/jquery/1.5/jquery.min.js?v=1.5.2')
-    //
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/misc/jquery.once.js?v=1.2')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/misc/drupal.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.accordion.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/views/js/jquery.ui.dialog.patch.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.tabs.min.js?v=1.8.11')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/jquery_ui_filter.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/accordion/jquery_ui_filter_accordion.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/dialog/jquery_ui_filter_dialog.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/tabs/jquery_ui_filter_tabs.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/themes/corporateclean/js/jquery.cycle.all.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/default/files/languages/es_wrBruHQT7kh7TFe4JFr6ZPO6VDNp31FtAj445wk2Mbk.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/libraries/colorbox/jquery.colorbox-min.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/colorbox/js/colorbox.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/colorbox/styles/default/colorbox_style.js?nwn3dp')
-      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/colorbox/js/colorbox_load.js?nwn3dp')
-      script(type='text/javascript').
+        @import url("http://www.bibliotecanacional.gov.co/themes/corporateclean/style.css?nwn3dp");
+        @import url("http://www.bibliotecanacional.gov.co/sites/default/files/color/corporateclean-121ef932/colors.css?nwn3dp");
+      script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/jquery/1.5/jquery.min.js?v=1.5.2')
+      //
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/misc/jquery.once.js?v=1.2')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/misc/drupal.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.accordion.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.button.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.position.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/views/js/jquery.ui.dialog.patch.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.tabs.min.js?v=1.8.11')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/jquery_ui_filter.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/accordion/jquery_ui_filter_accordion.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/dialog/jquery_ui_filter_dialog.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/jquery_ui_filter/tabs/jquery_ui_filter_tabs.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/themes/corporateclean/js/jquery.cycle.all.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/default/files/languages/es_wrBruHQT7kh7TFe4JFr6ZPO6VDNp31FtAj445wk2Mbk.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/libraries/colorbox/jquery.colorbox-min.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/colorbox/js/colorbox.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/colorbox/styles/default/colorbox_style.js?nwn3dp')
+        script(type='text/javascript', src='http://www.bibliotecanacional.gov.co/sites/all/modules/colorbox/js/colorbox_load.js?nwn3dp')
+        script(type='text/javascript').
+
   body.html.not-front.not-logged-in.one-sidebar.sidebar-first.page-node.page-node-.page-node-134.node-type-article
     #skip-link
       a.element-invisible.element-focusable(href='#main-content')

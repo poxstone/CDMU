@@ -1,5 +1,5 @@
 extends layout
-extends layout_only
+
 
 block head
 	include header
@@ -12,13 +12,12 @@ block content
 	link#stylo(rel="stylesheet",href="#{rdir}/imagenes/bnc_cartografia/css/cdmu-style.css")
 	script(src="#{rdir}/imagenes/bnc_cartografia/js/cdmu-dsn.js")
 	div#CDMU-CONT.not-class
-		a.focuseme(href="#")
 		div.header
 			div.bg-figure
 			div.wrapper
 				div.menu-gram
 					div.img-gram
-						img.gramfn(src="#{rdir}/imagenes/bnc_cartografia/img/banner/gramofono.png")
+						img.gramfn(src="#{rdir}/imagenes/bnc_cartografia/img/banner/gramofono.png",onclick="cdmu_links.togglMenu(this.evento)")
 					div.lnk-gram
 						for name, index in titles 
 							a(class='lnk_#{index}',href="##{links[index]}"): span.label #{name}

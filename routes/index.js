@@ -7,9 +7,8 @@ var rdir = '';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	var qr = req.query;
-	console.log('queryyyyy: ',qr);
-	res.render('index', { qr : qr, rdir : rdir});
+	res.render('index', { qr : req.query, rdir : rdir});
+	console.log(req.query);
 });
 
 module.exports = router;
