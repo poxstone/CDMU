@@ -8,7 +8,7 @@ block content
 	-titles= ['Músicas Tradicionales','Festivales de Música','Expresiones sonoras y musicales Comunidades Indigenas','Investigación y Documentación','Bandas','Tesauro','Expresiones Vocales','A manera de introducción']
 	-links = ['tradicionales','festivales','expresiones','investigacion','bandas','tesauro','vocales','introcuccion',]
 	script(src="#{rdir}/imagenes/bnc_cartografia/js/jquery.min.js")
-	script(src="//maps.googleapis.com/maps/api/js")
+	script(src="http://maps.google.com/maps/api/js?sensor=false",type="text/javascript")
 	link#stylo(rel="stylesheet",href="#{rdir}/imagenes/bnc_cartografia/css/cdmu-style.css")
 	script(src="#{rdir}/imagenes/bnc_cartografia/js/cdmu-dsn.js")
 	div#CDMU-CONT.not-class
@@ -29,7 +29,7 @@ block content
 							h2= titles[0]
 							div.overflower
 								div#map.mapa
-									img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									-//img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 								p Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
@@ -55,7 +55,7 @@ block content
 							h2= titles[2]
 							div.overflower
 								div#map.mapa
-									img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									-//img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
 								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
@@ -66,7 +66,7 @@ block content
 							h2= titles[3]
 							div.overflower
 								div#map.mapa
-									img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									-//img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
@@ -78,7 +78,7 @@ block content
 							h2= titles[4]
 							div.overflower
 								div#map.mapa
-									img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+-//									img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
 
@@ -101,7 +101,7 @@ block content
 							h2= titles[6]
 							div.overflower
 								div#map.mapa
-									img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									-//img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
 								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
@@ -123,7 +123,7 @@ block content
 								p CENTRO DE DOCUMENTACIÓN MUSICAL
 								p Junio de 2007
 
-
+					script(src="#{rdir}/imagenes/bnc_cartografia/js/map-example.js")
 		div.contenido
 
 			div.wrapper
@@ -137,4 +137,4 @@ block content
 				p (2) En el proyecto de Escuelas de Música Tradicional consideramos que las Músicas Indígenas deben tener un tratamiento especial concertado con las autoridades de las respectivas comunidades. Únicamente referenciamos en este proyecto la música de bandas de flautas de los pueblos Nasa, Guambiano y Yanacona de los departamento de Cauca y Huila por su fuerte relación con la música de contextos campesinos del sur del Cauca. Para profundizar en el marco conceptual de las Escuelas de Música Tradicional descargue el documento de “Parámetros de las Escuelas de Música Tradicional” haciendo click en el botón rojo ubicado a la derecha de este caja de texto. Formato PDF.
 
 		div.credits
-			img(src="#{rdir}/imagenes/bnc_cartografia/img/banner/credits.png")
+			-//img(src="#{rdir}/imagenes/bnc_cartografia/img/banner/credits.png")
