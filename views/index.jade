@@ -7,21 +7,17 @@ block head
 block content
 
 	script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/jquery.min.js")
-	script(src="http://maps.google.com/maps/api/js?sensor=false",type="text/javascript")
+	//script(src="http://maps.google.com/maps/api/js?sensor=false",type="text/javascript")
 	link#stylo(rel="stylesheet",href="#{gb.rdir}/imagenes/bnc_cartografia/css/cdmu-style.css")
 	script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/cdmu-dsn.js")
+	//script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/map-example.js")
+
 	div#CDMU-CONT.not-class
 		div.header
 			div.bg-figure
 			div.wrapper
-				div.menu-gram
-					div.img-gram
-						img.gramfn(src="#{gb.rdir}/imagenes/bnc_cartografia/img/banner/gramofono.png",onclick="cdmu_links.togglMenu(this.evento)")
-					div.lnk-gram
+				include menu
 
-						for name, index in gb.titles 
-							a(class='lnk_#{index}',href="##{gb.links[index]}"): span.label #{name}
-				
 				div#DIN-CON: div.wrapper
 					
 					section.intercambiable.is-mapa(id="#{gb.links[0]}")
@@ -89,7 +85,7 @@ block content
 							h2= gb.titles[5]
 							div.overflower
 								div#map.mapa
-									iframe.map-iframe(src="http://www.bibliotecanacional.gov.co/CDM/tesauro/")
+									//iframe.map-iframe(src="http://www.bibliotecanacional.gov.co/CDM/tesauro/")
 							div.cont-txt
 								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
 								p Tanto el Plan Nacional de Lectura y Bibliotecas (PNLB) como el Plan Nacional de Música para la Convivencia (PNMC) se proponen fomentar vínculos de convivencia basados en la valoración de la creación cultural, el respeto a la diversidad y la participación social en condiciones de equidad, promoviendo el acceso de toda la población a la información, conocimiento y disfrute, mediante la producción de  medios escritos, sonoros y/o audiovisuales que faciliten el reconocimiento, la conservación, la transmisión y la recreación de la tradición oral y escrita de las comunidades. 
@@ -124,7 +120,6 @@ block content
 								p CENTRO DE DOCUMENTACIÓN MUSICAL
 								p Junio de 2007
 
-					script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/map-example.js")
 		div.contenido
 
 			div.wrapper
