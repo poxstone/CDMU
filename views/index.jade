@@ -5,31 +5,32 @@ block head
 	include header
 
 block content
-	-titles= ['Músicas Tradicionales','Festivales de Música','Expresiones sonoras y musicales Comunidades Indigenas','Investigación y Documentación','Bandas','Tesauro','Expresiones Vocales','A manera de introducción']
-	-links = ['tradicionales','festivales','expresiones','investigacion','bandas','tesauro','vocales','introcuccion',]
-	script(src="#{rdir}/imagenes/bnc_cartografia/js/jquery.min.js")
+
+	script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/jquery.min.js")
 	script(src="http://maps.google.com/maps/api/js?sensor=false",type="text/javascript")
-	link#stylo(rel="stylesheet",href="#{rdir}/imagenes/bnc_cartografia/css/cdmu-style.css")
-	script(src="#{rdir}/imagenes/bnc_cartografia/js/cdmu-dsn.js")
+	link#stylo(rel="stylesheet",href="#{gb.rdir}/imagenes/bnc_cartografia/css/cdmu-style.css")
+	script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/cdmu-dsn.js")
 	div#CDMU-CONT.not-class
 		div.header
 			div.bg-figure
 			div.wrapper
 				div.menu-gram
 					div.img-gram
-						img.gramfn(src="#{rdir}/imagenes/bnc_cartografia/img/banner/gramofono.png",onclick="cdmu_links.togglMenu(this.evento)")
+						img.gramfn(src="#{gb.rdir}/imagenes/bnc_cartografia/img/banner/gramofono.png",onclick="cdmu_links.togglMenu(this.evento)")
 					div.lnk-gram
-						for name, index in titles 
-							a(class='lnk_#{index}',href="##{links[index]}"): span.label #{name}
+
+						for name, index in gb.titles 
+							a(class='lnk_#{index}',href="##{gb.links[index]}"): span.label #{name}
+				
 				div#DIN-CON: div.wrapper
 					
-					section#tradicionales.intercambiable.is-mapa
+					section.intercambiable.is-mapa(id="#{gb.links[0]}")
 						div.din-txt
 							a.CDMU-close(onclick="cdmu_links.quit(this,'quit')") &times;
-							h2= titles[0]
+							h2= gb.titles[0]
 							div.overflower
 								div#map.mapa
-									-//img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 								p Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
@@ -37,55 +38,55 @@ block content
 								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
 								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
 
-					section#festivales.intercambiable.is-mapa
+					section.intercambiable.is-mapa(id="#{gb.links[1]}")
 						div.din-txt
 							a.CDMU-close(onclick="cdmu_links.quit(this,'quit')") &times;
-							h2= titles[1]
+							h2= gb.titles[1]
 							div.overflower
 								div#map.mapa
-									img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
 								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
 								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
 
-					section#expresiones.intercambiable.is-mapa
+					section.intercambiable.is-mapa(id="#{gb.links[2]}")
 						div.din-txt
 							a.CDMU-close(onclick="cdmu_links.quit(this,'quit')") &times;
-							h2= titles[2]
+							h2= gb.titles[2]
 							div.overflower
 								div#map.mapa
-									-//img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
 								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
 
-					section#investigacion.intercambiable.is-mapa
+					section.intercambiable.is-mapa(id="#{gb.links[3]}")
 						div.din-txt
 							a.CDMU-close(onclick="cdmu_links.quit(this,'quit')") &times;
-							h2= titles[3]
+							h2= gb.titles[3]
 							div.overflower
 								div#map.mapa
-									-//img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
 								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
 
-					section#bandas.intercambiable.is-mapa
+					section.intercambiable.is-mapa(id="#{gb.links[4]}")
 						div.din-txt
 							a.CDMU-close(onclick="cdmu_links.quit(this,'quit')") &times;
-							h2= titles[4]
+							h2= gb.titles[4]
 							div.overflower
 								div#map.mapa
--//									img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
 
-					section#tesauro.intercambiable.is-iframe
+					section.intercambiable.is-iframe(id="#{gb.links[5]}")
 						div.din-txt
 							a.CDMU-close(onclick="cdmu_links.quit(this,'quit')") &times;
-							h2= titles[5]
+							h2= gb.titles[5]
 							div.overflower
 								div#map.mapa
 									iframe.map-iframe(src="http://www.bibliotecanacional.gov.co/CDM/tesauro/")
@@ -95,21 +96,21 @@ block content
 								p Dada la enorme cantidad de prácticas musicales que se desarrollan en nuestro país, la riqueza y diversidad, la altísima movilidad y transformabilidad de las formas de producción, recreación y difusión de múltiples expresiones musicales presentes, vigentes, extintas o inactivas y la necesidad de generar un canal de circulación que promueva su reconocimiento y valoración que no esté atado a los medios más convencionales y masivos, el Centro de Documentación Musical se ha propuesto la realización de un ambicioso proyecto que permita un proceso continuo de socialización y actualización acorde con las características de las distintas prácticas musicales en ámbitos locales, regionales y nacionales. Esta noción recoge un criterio técnico que fundamenta el Plan Nacional de Música para la Convivencia en relación con la caracterización de las músicas de las regiones del país, y se propone establecer coherencia entre los planes y programas que lidera el Ministerio articulando y fortaleciendo sus acciones.
 
 
-					section#vocales.intercambiable.is-mapa
+					section.intercambiable.is-mapa(id="#{gb.links[6]}")
 						div.din-txt
 							a.CDMU-close(onclick="cdmu_links.quit(this,'quit')") &times;
-							h2= titles[6]
+							h2= gb.titles[6]
 							div.overflower
 								div#map.mapa
-									-//img(src="#{rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
 							div.cont-txt
 								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
 								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
 
-					section#introcuccion.intercambiable.is-normal
+					section.intercambiable.is-normal(id="#{gb.links[7]}")
 						div.din-txt
 							a.CDMU-close(onclick="cdmu_links.quit(this,'quit')") &times;
-							h2= titles[7]
+							h2= gb.titles[7]
 						
 							div.overflower
 								p Dada la enorme cantidad de prácticas musicales que se desarrollan en nuestro país, la riqueza y diversidad, la altísima movilidad y transformabilidad de las formas de producción, recreación y difusión de múltiples expresiones musicales presentes, vigentes, extintas o inactivas y la necesidad de generar un canal de circulación que promueva su reconocimiento y valoración que no esté atado a los medios más convencionales y masivos, el Centro de Documentación Musical se ha propuesto la realización de un ambicioso proyecto que permita un proceso continuo de socialización y actualización acorde con las características de las distintas prácticas musicales en ámbitos locales, regionales y nacionales. Esta noción recoge un criterio técnico que fundamenta el Plan Nacional de Música para la Convivencia en relación con la caracterización de las músicas de las regiones del país, y se propone establecer coherencia entre los planes y programas que lidera el Ministerio articulando y fortaleciendo sus acciones.
@@ -123,11 +124,11 @@ block content
 								p CENTRO DE DOCUMENTACIÓN MUSICAL
 								p Junio de 2007
 
-					script(src="#{rdir}/imagenes/bnc_cartografia/js/map-example.js")
+					script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/map-example.js")
 		div.contenido
 
 			div.wrapper
-				h1 Cartografía de Prácticas musicales en Colombia
+				h1= gb.titles[8]
 				p Múltiples historias y geografías modelan la gran cantidad de prácticas musicales que se desarrollan en nuestro país. Historias de antes y de ahora, nuevos relieves que fundan sonoridades en torno a las cuales se aglutina la gente.
 				p Pretender un mapeo de las prácticas musicales bajo la condición histórica de actualidad y movilidad nos obliga a comprender las músicas en nuestro país como expresiones ágiles, dinámicas, capaces de ser apropiadas y de apropiarse territorios, instrumentos, repertorios, escenarios, técnicas, tecnologías, todo cuanto sea necesario para enfrentar el reto diario de mantenerse vigentes, de circular.    
 				p En esta Cartografía de Prácticas Musicales en Colombia no tratamos de realizar un inventario localizado de La música en Colombia, solo intentamos IDENTIFICAR PUNTOS ESTRATÉGICOS en donde PRÁCTICAS MUSICALES ESPECÍFICAS, del tipo que sea (Comercial, académica, ritual, rural, urbana etc.), van estructurando sus propias redes de producción, circulación y consumo. Se trata de seguir la ruta de movilidad de diversas prácticas sonoras que se desarrollan en ámbitos locales, regionales y nacionales en Colombia.
@@ -137,4 +138,4 @@ block content
 				p (2) En el proyecto de Escuelas de Música Tradicional consideramos que las Músicas Indígenas deben tener un tratamiento especial concertado con las autoridades de las respectivas comunidades. Únicamente referenciamos en este proyecto la música de bandas de flautas de los pueblos Nasa, Guambiano y Yanacona de los departamento de Cauca y Huila por su fuerte relación con la música de contextos campesinos del sur del Cauca. Para profundizar en el marco conceptual de las Escuelas de Música Tradicional descargue el documento de “Parámetros de las Escuelas de Música Tradicional” haciendo click en el botón rojo ubicado a la derecha de este caja de texto. Formato PDF.
 
 		div.credits
-			-//img(src="#{rdir}/imagenes/bnc_cartografia/img/banner/credits.png")
+			img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/banner/credits.png")

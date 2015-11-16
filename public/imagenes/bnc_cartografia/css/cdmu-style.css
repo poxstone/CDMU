@@ -911,38 +911,38 @@ a.CDMU-close:hover {
   height: 100%;
   width: 100%;
 }
-.normal#CDMU-CONT .header .bg-figure,
-.hover_normal#CDMU-CONT .header .bg-figure {
+.cartografias#CDMU-CONT .header .bg-figure,
+.hover_cartografias#CDMU-CONT .header .bg-figure {
   background-color: #199dc3;
   background-image: url("../img/banner/bg-00.png");
 }
-.tradicionales#CDMU-CONT .header .bg-figure,
-.hover_tradicionales#CDMU-CONT .header .bg-figure {
+.cartografias_tradicionales#CDMU-CONT .header .bg-figure,
+.hover_cartografias_tradicionales#CDMU-CONT .header .bg-figure {
   background-color: #65160a;
   background-image: url("../img/banner/bg-01.png");
 }
-.festivales#CDMU-CONT .header .bg-figure,
-.hover_festivales#CDMU-CONT .header .bg-figure {
+.cartografias_festivales#CDMU-CONT .header .bg-figure,
+.hover_cartografias_festivales#CDMU-CONT .header .bg-figure {
   background-color: #15546b;
   background-image: url("../img/banner/bg-02.png");
 }
-.expresiones#CDMU-CONT .header .bg-figure,
-.hover_expresiones#CDMU-CONT .header .bg-figure {
+.cartografias_indigenas#CDMU-CONT .header .bg-figure,
+.hover_cartografias_indigenas#CDMU-CONT .header .bg-figure {
   background-color: #65676a;
   background-image: url("../img/banner/bg-03.png");
 }
-.investigacion#CDMU-CONT .header .bg-figure,
-.hover_investigacion#CDMU-CONT .header .bg-figure {
+.cartografias_redes#CDMU-CONT .header .bg-figure,
+.hover_cartografias_redes#CDMU-CONT .header .bg-figure {
   background-color: #7d802d;
   background-image: url("../img/banner/bg-04.png");
 }
-.bandas#CDMU-CONT .header .bg-figure,
-.hover_bandas#CDMU-CONT .header .bg-figure {
+.cartografias_bandas#CDMU-CONT .header .bg-figure,
+.hover_cartografias_bandas#CDMU-CONT .header .bg-figure {
   background-color: #9f7446;
   background-image: url("../img/banner/bg-05.png");
 }
-.tesauro#CDMU-CONT .header .bg-figure,
-.hover_tesauro#CDMU-CONT .header .bg-figure {
+.cartografias_tesauro#CDMU-CONT .header .bg-figure,
+.hover_cartografias_tesauro#CDMU-CONT .header .bg-figure {
   background-color: #906a12;
   background-image: url("../img/banner/bg-06.png");
 }

@@ -23,6 +23,7 @@ var util = {
     }
   }
 };
+
 util.agent_version();
 
 var cdmu_links= {
@@ -31,34 +32,40 @@ var cdmu_links= {
         var vars = cdmu_links.vars;
         var lnk_id = $lnk.attr('href').replace('#','') || null;
         var $sectionShow = jQuery('#'+lnk_id);
-        var lnk_class = $sectionShow.attr('class').match(/is-\w+/)[0];
-        
-        if(option=='click'){
+        if( $sectionShow.length ){
+
+            var lnk_class = $sectionShow.attr('class').match(/is-\w+/)[0];
             
-            lnk_class = lnk_class +' '+ lnk_id;//add id secction
-            
-            vars.$din_sections.removeClass('show').addClass('hide');//hide all
-            $sectionShow.removeClass('hide').addClass('show');//show section
-            vars.$cdmu_general.attr('class','').addClass(lnk_class);//add class from id section
-            vars.$cont_menu.removeClass('hover');//close menu
-            location.hash = lnk_id;
-            
-        }else if(option=='mouseenter'){
-            
-            vars.$cdmu_general.addClass( 'hover_'+lnk_id );//add class from id section
-            
-        }else if(option=='mouseleave'){
-            var contGent_class = vars.$cdmu_general.attr('class').match(/hover_\w+/) || '';
-            
-            if( contGent_class ){
-                contGent_class = contGent_class[0];
+            if(option=='click'){
+                
+                lnk_class = lnk_class +' '+ lnk_id;//add id secction
+                
+                vars.$din_sections.removeClass('show').addClass('hide');//hide all
+                $sectionShow.removeClass('hide').addClass('show');//show section
+                vars.$cdmu_general.attr('class','').addClass(lnk_class);//add class from id section
+                vars.$cont_menu.removeClass('hover');//close menu
+                location.hash = lnk_id;
+                
+            }else if(option=='mouseenter'){
+                
+                vars.$cdmu_general.addClass( 'hover_'+lnk_id );//add class from id section
+                
+            }else if(option=='mouseleave'){
+                var contGent_class = vars.$cdmu_general.attr('class').match(/hover_\w+/) || '';
+                
+                if( contGent_class ){
+                    contGent_class = contGent_class[0];
+                }
+                
+                vars.$cdmu_general.removeClass(contGent_class);
+                
+            }else if(option=='quit'){
+                var contGent_class = vars.$cdmu_general.attr('class','');
+                
             }
-            
-            vars.$cdmu_general.removeClass(contGent_class);
-            
-        }else if(option=='quit'){
-            var contGent_class = vars.$cdmu_general.attr('class','');
-            
+
+        }else{
+            console.log('No hay Id para link');
         }
         
     },
@@ -90,7 +97,6 @@ var cdmu_links= {
                     document.isAction_menu= true;
                     
                 }
-                
                 
             }
             

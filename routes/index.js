@@ -1,14 +1,17 @@
 var express = require('express');
 var router = express.Router();
+var gb = {
+	//rdir : 'http://nrno-poxstone.c9.io/imagenes/bnc_cartografia',
+	//rdir : 'http://www.bibliotecanacional.gov.co/imagenes/bnc_cartografia',
+	rdir :'',
+	titles : ['Músicas Tradicionales','Festivales de Música','Expresiones sonoras y musicales Comunidades Indigenas','Investigación y Documentación','Bandas','Tesauro','Expresiones Vocales','A manera de introducción','Cartografía de Prácticas musicales en Colombia'],
+	links : ["cartografias_tradicionales", "cartografias_festivales", "cartografias_indigenas", "cartografias_redes", "cartografias_bandas", "cartografias_tesauro", 'vocales', 'introcuccion',"cartografias"]
+};
 
-var rdir = 'http://nrno-poxstone.c9.io/imagenes/bnc_cartografia';
-var rdir = 'http://www.bibliotecanacional.gov.co/imagenes/bnc_cartografia';
-var rdir = '';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index', { qr : req.query, rdir : rdir});
-	console.log(req.query);
+	res.render('index', { qr : req.query, gb : gb } );
 });
 
 module.exports = router;
