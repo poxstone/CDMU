@@ -2,6 +2,11 @@ div.menu-gram
 	div.img-gram
 		img.gramfn(src="#{gb.rdir}/imagenes/bnc_cartografia/img/banner/gramofono.png",onclick="cdmu_links.togglMenu(this.evento)")
 	div.lnk-gram
-
+		
 		for name, index in gb.titles 
-			a(class='lnk_#{index}',href="##{gb.links[index]}"): span.label #{name}
+			-link = gb.rdir+gb.links[index]
+			-if( qr.total==1 )
+				-link = '#'+gb.links[index]
+				
+
+			a(class='lnk_#{index}',href=link): span.label #{name}

@@ -14,4 +14,16 @@ router.get('/', function(req, res, next) {
 	res.render('index', { qr : req.query, gb : gb } );
 });
 
+router.get('/cartografias', function(req, res, next) {
+	res.render('index', { qr : req.query, gb : gb } );
+});
+
+router.get('/cartografias_tradicionales', function(req, res, next) {
+	res.render('cartografias_tradicionales', { qr : req.query, gb : gb } );
+});
+
+router.get('/total', function(req, res, next) {
+	res.render('total', { qr : req.query, gb : gb } );
+});
+
 module.exports = router;

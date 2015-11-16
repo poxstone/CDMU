@@ -1,0 +1,138 @@
+extends layout
+
+
+block head
+	include header
+
+block content
+
+	script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/jquery.min.js")
+	//script(src="http://maps.google.com/maps/api/js?sensor=false",type="text/javascript")
+	link#stylo(rel="stylesheet",href="#{gb.rdir}/imagenes/bnc_cartografia/css/cdmu-style.css")
+	script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/cdmu-dsn.js")
+	//script(src="#{gb.rdir}/imagenes/bnc_cartografia/js/map-example.js")
+
+	div#CDMU-CONT.not-class
+		div.header
+			div.bg-figure
+			div.wrapper
+
+				include menu
+
+				div#DIN-CON: div.wrapper
+					
+					section.intercambiable.is-mapa(id="#{gb.links[0]}")
+						div.din-txt
+							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)") &times;
+							h2= gb.titles[0]
+							div.overflower
+								div#map.mapa
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+							div.cont-txt
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+								p Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+
+					section.intercambiable.is-mapa(id="#{gb.links[1]}")
+						div.din-txt
+							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)") &times;
+							h2= gb.titles[1]
+							div.overflower
+								div#map.mapa
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+										
+							div.cont-txt
+								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+
+					section.intercambiable.is-mapa(id="#{gb.links[2]}")
+						div.din-txt
+							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)") &times;
+							h2= gb.titles[2]
+							div.overflower
+								div#map.mapa
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+							div.cont-txt
+								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+
+					section.intercambiable.is-mapa(id="#{gb.links[3]}")
+						div.din-txt
+							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)") &times;
+							h2= gb.titles[3]
+							div.overflower
+								div#map.mapa
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+							div.cont-txt
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+
+					section.intercambiable.is-mapa(id="#{gb.links[4]}")
+						div.din-txt
+							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)") &times;
+							h2= gb.titles[4]
+							div.overflower
+								div#map.mapa
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+							div.cont-txt
+								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+
+					section.intercambiable.is-iframe(id="#{gb.links[5]}")
+						div.din-txt
+							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)") &times;
+							h2= gb.titles[5]
+							div.overflower
+								div#map.mapa
+									//iframe.map-iframe(src="http://www.bibliotecanacional.gov.co/CDM/tesauro/")
+							div.cont-txt
+								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+								p Tanto el Plan Nacional de Lectura y Bibliotecas (PNLB) como el Plan Nacional de Música para la Convivencia (PNMC) se proponen fomentar vínculos de convivencia basados en la valoración de la creación cultural, el respeto a la diversidad y la participación social en condiciones de equidad, promoviendo el acceso de toda la población a la información, conocimiento y disfrute, mediante la producción de  medios escritos, sonoros y/o audiovisuales que faciliten el reconocimiento, la conservación, la transmisión y la recreación de la tradición oral y escrita de las comunidades. 
+								p Dada la enorme cantidad de prácticas musicales que se desarrollan en nuestro país, la riqueza y diversidad, la altísima movilidad y transformabilidad de las formas de producción, recreación y difusión de múltiples expresiones musicales presentes, vigentes, extintas o inactivas y la necesidad de generar un canal de circulación que promueva su reconocimiento y valoración que no esté atado a los medios más convencionales y masivos, el Centro de Documentación Musical se ha propuesto la realización de un ambicioso proyecto que permita un proceso continuo de socialización y actualización acorde con las características de las distintas prácticas musicales en ámbitos locales, regionales y nacionales. Esta noción recoge un criterio técnico que fundamenta el Plan Nacional de Música para la Convivencia en relación con la caracterización de las músicas de las regiones del país, y se propone establecer coherencia entre los planes y programas que lidera el Ministerio articulando y fortaleciendo sus acciones.
+
+
+					section.intercambiable.is-mapa(id="#{gb.links[6]}")
+						div.din-txt
+							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)") &times;
+							h2= gb.titles[6]
+							div.overflower
+								div#map.mapa
+									img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/_mapa.png")
+							div.cont-txt
+								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+
+					section.intercambiable.is-normal(id="#{gb.links[7]}")
+						div.din-txt
+							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)") &times;
+							h2= gb.titles[7]
+						
+							div.overflower
+								p Dada la enorme cantidad de prácticas musicales que se desarrollan en nuestro país, la riqueza y diversidad, la altísima movilidad y transformabilidad de las formas de producción, recreación y difusión de múltiples expresiones musicales presentes, vigentes, extintas o inactivas y la necesidad de generar un canal de circulación que promueva su reconocimiento y valoración que no esté atado a los medios más convencionales y masivos, el Centro de Documentación Musical se ha propuesto la realización de un ambicioso proyecto que permita un proceso continuo de socialización y actualización acorde con las características de las distintas prácticas musicales en ámbitos locales, regionales y nacionales. Esta noción recoge un criterio técnico que fundamenta el Plan Nacional de Música para la Convivencia en relación con la caracterización de las músicas de las regiones del país, y se propone establecer coherencia entre los planes y programas que lidera el Ministerio articulando y fortaleciendo sus acciones.
+								p Se propone, así mismo, promover múltiples vínculos entre los actores directos de las prácticas musicales, por distantes que ellas se encuentren, y generar un diálogo de saberes sobre el conocimiento y los procesos de creación musical. Pretende, a su vez, incentivar a creadores, intérpretes, agrupaciones, instituciones y organizaciones de todo tipo vinculadas con la actividad musical en Colombia, a participar de un proceso de construcción de conocimiento e información que se nutre y se actualiza en forma permanente y continua con fines  de recuperación, protección y divulgación, coordinado y administrado por el Centro de Documentación Musical de la Biblioteca Nacional de Colombia.
+								p Tanto el Plan Nacional de Lectura y Bibliotecas (PNLB) como el Plan Nacional de Música para la Convivencia (PNMC) se proponen fomentar vínculos de convivencia basados en la valoración de la creación cultural, el respeto a la diversidad y la participación social en condiciones de equidad, promoviendo el acceso de toda la población a la información, conocimiento y disfrute, mediante la producción de  medios escritos, sonoros y/o audiovisuales que faciliten el reconocimiento, la conservación, la transmisión y la recreación de la tradición oral y escrita de las comunidades. 
+								p Desde esta perspectiva, el CDM como institución de carácter nacional cuya misión es fomentar el patrimonio sonoro-musical y aportar a la construcción de la memoria musical colectiva de todo el país, se ha dado a la tarea de articular estos propósitos mediante la realización de cartografías de prácticas musicales que promuevan la difusión del patrimonio musical colombiano más diverso y representativo.
+								p Este escenario colectivo de nuestros mapas sonoros proyecta el encuentro de saberes que se han establecido en torno a las prácticas musicales,  la transmisión oral, las lógicas particulares, las formas de construcción y transmisión de conocimiento, sus mecanismos de legitimación, así como, los saberes construidos en los espacios académicos ordenados por la escritura, la investigación, la elaboración teórica y la sistematización. 
+								p Coinciden El PNMC y el PNLB en el impulso y apoyo a mecanismos de circulación de la creación cultural generando estrategias para su promoción, tales como escenarios y producciones especializadas para medios masivos de comunicación, buscando que la población amplíe sus posibilidades de contacto con las expresiones culturales como la música y la lectura y tenga un mayor nivel de entendimiento y apropiación de ella.
+								p En este avance de la presentación cartográfica se desarrolla la primera capa del mapa en la que se hace énfasis en las prácticas de música tradicional regional. 
+								p Casi la totalidad de los documentos incluidos en este proyecto provienen de procesos de recolección, documentación, análisis, sistematización y validación,  originados en la actividad de este Centro.
+								p CENTRO DE DOCUMENTACIÓN MUSICAL
+								p Junio de 2007
+
+		div.contenido
+
+			div.wrapper
+				h1= gb.titles[8]
+				p Múltiples historias y geografías modelan la gran cantidad de prácticas musicales que se desarrollan en nuestro país. Historias de antes y de ahora, nuevos relieves que fundan sonoridades en torno a las cuales se aglutina la gente.
+				p Pretender un mapeo de las prácticas musicales bajo la condición histórica de actualidad y movilidad nos obliga a comprender las músicas en nuestro país como expresiones ágiles, dinámicas, capaces de ser apropiadas y de apropiarse territorios, instrumentos, repertorios, escenarios, técnicas, tecnologías, todo cuanto sea necesario para enfrentar el reto diario de mantenerse vigentes, de circular.    
+				p En esta Cartografía de Prácticas Musicales en Colombia no tratamos de realizar un inventario localizado de La música en Colombia, solo intentamos IDENTIFICAR PUNTOS ESTRATÉGICOS en donde PRÁCTICAS MUSICALES ESPECÍFICAS, del tipo que sea (Comercial, académica, ritual, rural, urbana etc.), van estructurando sus propias redes de producción, circulación y consumo. Se trata de seguir la ruta de movilidad de diversas prácticas sonoras que se desarrollan en ámbitos locales, regionales y nacionales en Colombia.
+				p Este enfoque nos permite definir variadas posibilidades de análisis y descripción de las músicas y construir problemas de investigación en torno a las prácticas musicales. En algunas ocasiones el criterio de definición de las prácticas puede ser el marco geográfico-territorial, otras veces puede ser el formato instrumental de las agrupaciones (bandas, coros, orquestas), otras puede ser el ámbito en el que se producen las músicas, como por ejemplo los programas musicales universitarios existentes en el país, o, por qué no, el carácter ritual o religioso de las músicas.
+				p Se trata de ir creando una cartografía con muchas capas en donde cada capa corresponda a una práctica musical distinta, con sus propias características y coordenadas de análisis, con sus particulares maneras de ser. Gradualmente, capa por capa, iremos levantando una Cartografía de Prácticas Musicales tan compleja, tan desigual y conflictiva como las músicas mismas, una cartografía de la memoria musical viva de nuestro país.
+				p (1) Si desea profundizar haga click en el Plan Nacional de Música
+				p (2) En el proyecto de Escuelas de Música Tradicional consideramos que las Músicas Indígenas deben tener un tratamiento especial concertado con las autoridades de las respectivas comunidades. Únicamente referenciamos en este proyecto la música de bandas de flautas de los pueblos Nasa, Guambiano y Yanacona de los departamento de Cauca y Huila por su fuerte relación con la música de contextos campesinos del sur del Cauca. Para profundizar en el marco conceptual de las Escuelas de Música Tradicional descargue el documento de “Parámetros de las Escuelas de Música Tradicional” haciendo click en el botón rojo ubicado a la derecha de este caja de texto. Formato PDF.
+
+		div.credits
+			img(src="#{gb.rdir}/imagenes/bnc_cartografia/img/banner/credits.png")

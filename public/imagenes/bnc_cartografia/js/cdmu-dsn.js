@@ -27,30 +27,37 @@ var util = {
 util.agent_version();
 
 var cdmu_links= {
-    lnk_events: function(link,option){
+    lnk_events: function(link,option,event){
         var $lnk = jQuery(link);
         var vars = cdmu_links.vars;
         var lnk_id = $lnk.attr('href').replace('#','') || null;
         var $sectionShow = jQuery('#'+lnk_id);
-        if( $sectionShow.length ){
 
-            var lnk_class = $sectionShow.attr('class').match(/is-\w+/)[0];
             
             if(option=='click'){
                 
-                lnk_class = lnk_class +' '+ lnk_id;//add id secction
+                if( $sectionShow.length ){
+                    event.preventDefault();
+                    
+                    var lnk_class = $sectionShow.attr('class').match(/is-\w+/)[0];
+                    lnk_class = lnk_class +' '+ lnk_id;//add id secction
                 
-                vars.$din_sections.removeClass('show').addClass('hide');//hide all
-                $sectionShow.removeClass('hide').addClass('show');//show section
-                vars.$cdmu_general.attr('class','').addClass(lnk_class);//add class from id section
-                vars.$cont_menu.removeClass('hover');//close menu
-                location.hash = lnk_id;
+                    vars.$din_sections.removeClass('show').addClass('hide');//hide all
+                    $sectionShow.removeClass('hide').addClass('show');//show section
+                    vars.$cdmu_general.attr('class','').addClass(lnk_class);//add class from id section
+                    vars.$cont_menu.removeClass('hover');//close menu
+                    location.hash = lnk_id;
+
+                }else{
+                    console.log('No hay Id para link');
+                }
                 
             }else if(option=='mouseenter'){
                 
                 vars.$cdmu_general.addClass( 'hover_'+lnk_id );//add class from id section
                 
             }else if(option=='mouseleave'){
+                
                 var contGent_class = vars.$cdmu_general.attr('class').match(/hover_\w+/) || '';
                 
                 if( contGent_class ){
@@ -60,13 +67,12 @@ var cdmu_links= {
                 vars.$cdmu_general.removeClass(contGent_class);
                 
             }else if(option=='quit'){
+
                 var contGent_class = vars.$cdmu_general.attr('class','');
+                console.log(123456);
                 
             }
 
-        }else{
-            console.log('No hay Id para link');
-        }
         
     },
     togglMenu: function(este, evento){
@@ -91,51 +97,57 @@ var cdmu_links= {
                         if( !$target.closest( '.menu-gram' ).length ){
                             
                             vars.$cont_menu.removeClass('hover');
-
                         }
                     });
                     document.isAction_menu= true;
-                    
                 }
-                
             }
-            
         }
-        
     },
-    quit: function(link,option){
-        
+    quit: function(link,option,event){
         var vars = cdmu_links.vars;
-        vars.$din_sections.removeClass('show').addClass('hide');//hide all
-        vars.$cdmu_general.attr('class','');
-        location.hash = '';
         
+        if( vars.$din_lnks.attr('href').match(/^#/) ){
+            
+            event.preventDefault();
+            vars.$din_sections.removeClass('show').addClass('hide');//hide all
+            vars.$cdmu_general.attr('class','');
+            location.hash = '';
+            return false;
+
+        }
     },
     actions: function(){
+
         var vars = cdmu_links.vars;
         
         vars.$din_lnks.each(function(ind,ele){
             var $lnk = jQuery(this);
             
-            
             $lnk.hover(
               function(e){
-                cdmu_links.lnk_events( $lnk, 'mouseenter' );
+                cdmu_links.lnk_events( $lnk, 'mouseenter', e);
               
               },function(e){
-                cdmu_links.lnk_events( $lnk, 'mouseleave' );
+                cdmu_links.lnk_events( $lnk, 'mouseleave', e);
               
             });
             
             $lnk.click(function(e){
-                e.preventDefault();
-                cdmu_links.lnk_events( $lnk, 'click' );
+
+                //muul event to hash
+                if ( $lnk.attr('href').match(/^#/) ){
+                    e.preventDefault();
+                }
+
+                cdmu_links.lnk_events( $lnk, 'click', e);
                 
             });
         });
         
     },
     autoCharge: function(){
+
         var vars = cdmu_links.vars;
         vars.url = location.hash;
         var $lnk = vars.$din_lnks.filter('[href*="'+vars.url+'"]');
@@ -143,6 +155,7 @@ var cdmu_links= {
         
     },
     ini: function(){
+
         cdmu_links.vars = {};
         var vars = cdmu_links.vars;
         vars.$cdmu_general = jQuery('#CDMU-CONT');
@@ -152,10 +165,11 @@ var cdmu_links= {
         vars.$cont_menu = jQuery('.menu-gram');
         
 
-        if( vars.$din_sections.length && vars.$din_lnks.length ){
+        if( vars.$din_lnks.length ){
             cdmu_links.actions();
             cdmu_links.autoCharge();
         }
+
     }
 };
 jQuery(function(){cdmu_links.ini();});
