@@ -440,6 +440,7 @@ a.CDMU-close
         .contenido
             opacity 0
             display none
+            
         @media(max-width $sc-sm)
             .menu-gram
                 width 60px
@@ -472,6 +473,11 @@ a.CDMU-close
                     width 100%
                     font-size 12px
                     color $gray
+            .mapa
+                margin-left 0
+                margin-bottom $paddingBox
+                    img
+                        max-width 100%
             .lnk-gram
                 right auto
                 left 0
@@ -503,6 +509,7 @@ a.CDMU-close
             float right
             .mapa
                 margin-left $paddingBox *2
+                margin-bottom $paddingBox
                 width 500px
                 height 600px
                 background $gray
@@ -512,9 +519,9 @@ a.CDMU-close
             .din-txt .overflower
                 float none
                 .mapa
+                    margin-left 0
                     width 100%
                     height 375px
-                    margin-left 0
         
     &.is-iframe
         .din-txt 
