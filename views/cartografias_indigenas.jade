@@ -1,0 +1,31 @@
+extends layout
+
+
+block head
+	include header
+
+block content
+
+	div#CDMU-CONT.is-mapa
+		div.header
+			div.bg-figure
+			div.wrapper
+				include menu
+
+				div#DIN-CON: div.wrapper
+					
+					section.intercambiable.is-mapa(id="#{gb.links[2]}")
+						div.din-txt
+							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)",href="#{gb.rdir}/cartografias") &times;
+							h2= gb.titles[2]
+							div.overflower
+								div#map.mapa
+									img(src="#{gb.rdir}/imagenes/cartografias/img/_mapa.png")
+							div.cont-txt
+								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+
+		div.credits
+			img(src="#{gb.rdir}/imagenes/cartografias/img/banner/credits.png")
+	
+	include map_example

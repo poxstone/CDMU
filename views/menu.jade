@@ -1,12 +1,50 @@
+-//script(src="http://maps.google.com/maps/api/js?sensor=false",type="text/javascript")
+link(rel="stylesheet",href="#{gb.rdir}/imagenes/cartografias/css/cdmu-style.css")
+script(src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript")
+script(src="#{gb.rdir}/imagenes/cartografias/js/cdmu-dsn.js")
+-//script(src="#{gb.rdir}/imagenes/cartografias/js/map-example.js")
+
 div.menu-gram
 	div.img-gram
-		img.gramfn(src="#{gb.rdir}/imagenes/bnc_cartografia/img/banner/gramofono.png",onclick="cdmu_links.togglMenu(this.evento)")
+		img.gramfn(src="#{gb.rdir}/imagenes/cartografias/img/banner/gramofono.png",onclick="cdmu_links.togglMenu(this.evento)")
 	div.lnk-gram
 		
-		for name, index in gb.titles 
-			-link = gb.rdir+gb.links[index]
+		for name, index in gb.titles
+			-link = gb.links[index]
 			-if( qr.total==1 )
 				-link = '#'+gb.links[index]
 				
+			if( index < (gb.titles.length-1) )
 
-			a(class='lnk_#{index}',href=link): span.label #{name}
+				a(class='lnk_#{index}',href=link): span.label #{name}
+	div.text-gram
+		div.tipographic(class=gb.links[0])
+			span.md Musicas
+			span.bg.text-right Tradicionales
+		div.tipographic(class=gb.links[1])
+			span.md Festivales
+			span.bg.text-right <small>de</small> Música
+		div.tipographic(class=gb.links[2])
+			span.xmall Expresiones sonoras y musicales
+			span.md Comunidades
+			span.bg.text-right.text-right Indigenas
+		div.tipographic(class=gb.links[3])
+			span.md Investigación y
+			span.bg.text-right.text-right Documentación
+		div.tipographic(class=gb.links[4])
+			span.bg.text-right.text-right Bandas
+		div.tipographic(class=gb.links[5])
+			span.bg.text-right.text-right Tesauro
+		div.tipographic(class=gb.links[6])
+			span.md Expresiones
+			span.bg.text-right.text-right Vocales
+		div.tipographic(class=gb.links[7])
+			span.md A manera
+			span.bg.text-right.text-right <small>de</small> Introducción
+		div.tipographic(class=gb.links[8])
+			span.md Cartográfias Músicales
+			span.bg.text-right.text-right Bienvenido
+
+
+
+

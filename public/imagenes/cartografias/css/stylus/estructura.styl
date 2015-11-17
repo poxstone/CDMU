@@ -22,14 +22,20 @@ body.i i
     #header-inside-left
         margin-left 0
 #navigation
-    width ($wrapper - 20) +1
+    width ($wrapper - 20)
     
 #content
     .msie_10 &, .msie_9 &, .msie_8 &
         margin-top -4px
 
+.text-left
+    text-align left !important
+.text-right
+    text-align right !important
 .text-center
-    text-align center
+    text-align center !important
+.text-justify
+    text-align justify !important
 
 #banner
 #content
@@ -58,8 +64,34 @@ body.i i
 
 #main
     padding-top 0 !important
+    margin auto
+    &[class*="grid_"]
+        float none
+    .tabs.primary
+        width $wrapper - ($paddingBox *4)
+        margin auto
+        a
+            color $textColor
+        .active a
+            z-index 10
+            position relative
+            background white
+            box-shadow rgba(0,0,0,0.2) 0 -2px  4px 0
+            color $gray
     .breadcrumb
-        display none !important
+        width $wrapper - ($paddingBox * 5)
+        margin auto
+        float none
+        background $green
+        margin -21px auto auto
+        padding-top 5px
+        &
+        .breadcrumb-separator
+            color #fff
+            color rgba(#fff,.75)
+        a
+            color #fff
+
 #block-system-main
     margin auto
     width auto
@@ -91,6 +123,7 @@ a.CDMU-close
     cursor pointer
     transition ease-in-out 250ms all
     box-shadow rgba(#000,0) 0px 0px 4px 0
+    text-decoration none
     &:hover
         box-shadow rgba(#000,.1) 2px 2px 4px 0
     
@@ -99,6 +132,8 @@ a.CDMU-close
     color $textColor
     padding-top 1px
     margin-top -1px
+    padding-bottom 100px
+    position relative
     
     .wrapper
         max-width $wrapper - 19
@@ -139,6 +174,7 @@ a.CDMU-close
             left 0
             height 100%
             width 100%
+            transition ease-in-out 250ms all
     
             $colors= $ban0, $ban1, $ban2, $ban3, $ban4, $ban5, $ban6, $ban7, $ban8
             $links= "cartografias", "cartografias_tradicionales", "cartografias_festivales", "cartografias_indigenas", "cartografias_redes", "cartografias_bandas", "cartografias_tesauro", 'vocales', 'introcuccion'
@@ -149,16 +185,25 @@ a.CDMU-close
                     $color= $colors[index]
                     background-color $color
                     background-image url($uri)
+                /#CDMU-CONT.hover_{value}
+                    .menu-gram .text-gram .tipographic.{value}
+                        display block
+                        animation showUp ease-in-out 500ms
+                    .tipographic.cartografias
+                        visibility hidden
             
     .credits
         display block
-        width auto
+        position absolute
+        top 100%
+        width 100%
         height auto
         text-align center
         img
-            margin auto
+            margin -50px auto 0
             padding 0
             display block
+            max-width 100%
     
     .menu-gram
         position absolute
@@ -181,8 +226,6 @@ a.CDMU-close
                 margin auto
                 max-width 100%
                 transition ease-in-out 250ms all
-            .is-mapa&{}
-            
                 
         .lnk-gram
             position absolute
@@ -244,6 +287,45 @@ a.CDMU-close
                         background-image url('../img/banner/ico_'+$i+'.png')
                         top $v
                         left $lft[$i]
+        
+        .text-gram
+            height 100%
+            position absolute
+            width $wrapper - ( $paddingBox *2 )
+            top 0
+            left 0
+            margin-left 121px
+            z-index -1
+            .tipographic
+                position absolute
+                bottom 75px
+                right 0
+                color #fff
+                text-shadow 2px 3.464px 8px rgba(0, 0, 0, 0.33)
+                text-align left
+                font-size 48px
+                line-height 1.2em
+                display none
+                
+                &.cartografias
+                    opacity 1
+                    display block
+                    animation showUp 750ms ease-in-out
+                
+                small
+                    display inline-block
+                    vertical-align top
+                    position relative
+                    top -3px
+                span
+                    display block
+                    &.bg
+                        font-size 62px
+                    &.sm
+                    small
+                        font-size 48px
+                    &.xmall
+                        font-size 32px
     
         @media( max-width $sc-sm)
             width 100%
@@ -337,7 +419,10 @@ a.CDMU-close
             img
                 top auto
                 bottom 42px
-                margin-left: 0 !important;
+                margin-left: 0 !important
+            .text-gram
+                display none !important
+                
                 
         .lnk-gram a
             position static
@@ -351,9 +436,10 @@ a.CDMU-close
             margin-right 40px
             box-shadow none
         .din-txt
-            padding-left 140px
+            padding-left 100px
         .contenido
             opacity 0
+            display none
         @media(max-width $sc-sm)
             .menu-gram
                 width 60px
@@ -374,6 +460,18 @@ a.CDMU-close
                     .lnk-gram
                         width 320px
                         opacity 1
+                .img-gram:after
+                    display block
+                    content 'Men''\00FA'
+                    height 10px
+                    width 10px
+                    position relative
+                    top 85px
+                    left 0
+                    text-align center
+                    width 100%
+                    font-size 12px
+                    color $gray
             .lnk-gram
                 right auto
                 left 0
@@ -405,20 +503,22 @@ a.CDMU-close
             float right
             .mapa
                 margin-left $paddingBox *2
-                width 450px
+                width 500px
                 height 600px
+                background $gray
+                    img
+                        width 100%
         @media(max-width $sc-sm)
             .din-txt .overflower
                 float none
                 .mapa
                     width 100%
+                    height 375px
                     margin-left 0
-                    img
-                        width 100%
         
     &.is-iframe
         .din-txt 
-            padding-left 121px
+            padding-left 100px
             .overflower .mapa
                 width 100%
             .mapa
@@ -461,7 +561,6 @@ a.CDMU-close
         position relative
     .intercambiable
         transition ease-in-out all 500ms
-        &
         &.hide
             display none
             opacity 0
@@ -474,7 +573,7 @@ a.CDMU-close
         width auto
         height auto
         position absolute
-        box-shadow rgba(#000,.25) -2px 4px 12px 0
+        box-shadow rgba(#000,.25) -2px -32px 48px 0
         padding $paddingBox *2
         right 0
         top 0
