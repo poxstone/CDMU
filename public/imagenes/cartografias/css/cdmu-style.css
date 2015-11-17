@@ -2069,6 +2069,9 @@ a.CDMU-close:hover {
     width: 100%;
     height: 375px;
   }
+  #CDMU-CONT.is-mapa .din-txt .overflower .mapa img {
+    max-width: 100%;
+  }
 }
 #CDMU-CONT.is-iframe .din-txt {
   padding-left: 100px;
