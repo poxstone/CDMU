@@ -179,12 +179,14 @@ a.CDMU-close
             $colors= $ban0, $ban1, $ban2, $ban3, $ban4, $ban5, $ban6, $ban7, $ban8
             $links= "cartografias", "cartografias_tradicionales", "cartografias_festivales", "cartografias_indigenas", "cartografias_redes", "cartografias_bandas", "cartografias_tesauro", 'vocales', 'introcuccion'
             for value, index in $links
+                $uri= '../img/banner/bg-0'+(index)+'.png'
+                $color= $colors[index]
                 .{value}&
-                .hover_{value}&
-                    $uri= '../img/banner/bg-0'+(index)+'.png'
-                    $color= $colors[index]
                     background-color $color
                     background-image url($uri)
+                .hover_{value}&
+                    background-color $color !important
+                    background-image url($uri) !important
                 /#CDMU-CONT.hover_{value}
                     .menu-gram .text-gram .tipographic.{value}
                         display block
@@ -196,14 +198,25 @@ a.CDMU-close
         display block
         position absolute
         top 100%
+        left 0
+        right 0
         width 100%
         height auto
         text-align center
+        border 1px solid $gray4
+        border-width 1px 0
+        margin -60px auto 0
+        max-width $wrapper -($paddingBox*2)
+        
         img
-            margin -50px auto 0
+            margin auto
             padding 0
             display block
             max-width 100%
+        .cred-cont
+            top -5px
+            position relative
+            padding-bottom $paddingBox
     
     .menu-gram
         position absolute
@@ -435,6 +448,15 @@ a.CDMU-close
             margin-bottom 3%
             margin-right 40px
             box-shadow none
+            opacity .5
+            &:hover
+                opacity 1
+            &.active
+                opacity 1
+                width 42px
+                height:42px
+                margin-right: 33px
+                box-shadow rgba($blue,1) 0 0 6px 0
         .din-txt
             padding-left 100px
         .contenido
@@ -498,14 +520,12 @@ a.CDMU-close
                     margin-right 0
             .din-txt
                 padding-left 60px
-                box-shadow none
-            .contenido
-               // display none
-                
-                
+                box-shadow none                
             
     &.is-mapa
         .din-txt .overflower
+            box-shadow rgba(#000,.33) 0 0 8px 0
+            padding $paddingBox
             float right
             .mapa
                 margin-left $paddingBox *2
@@ -526,7 +546,7 @@ a.CDMU-close
                         max-width 100%
         
     &.is-iframe
-        .din-txt 
+        .din-txt
             padding-left 100px
             .overflower .mapa
                 width 100%
@@ -534,7 +554,6 @@ a.CDMU-close
                 padding-top 1px
                 padding-bottom 1px
                 margin-bottom $paddingBox
-                
                 
                 &:before
                 &:after
