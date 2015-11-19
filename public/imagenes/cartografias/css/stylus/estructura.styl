@@ -135,6 +135,63 @@ a.CDMU-close
     padding-bottom 100px
     position relative
     
+    dt
+        font-weight bold
+    dd
+        margin-bottom $paddingBox
+        margin-left $paddingBox
+    
+    ul
+        margin-top 0
+        
+    .clear
+        clear both
+        float left
+        width 100%
+        
+    ul.boxes
+        padding-left 0
+        clear both
+        overflow hidden
+        li
+            padding $paddingBox
+            padding-top 0
+            width 47%
+            float left
+            display block
+            @media(max-width $sc-md)
+                float none
+                width auto
+    
+    ul.leyenda
+        padding $paddingBox
+        margin 0
+        li
+            display block
+            padding 4px 0
+            line-height 1.1em
+            clear left
+        
+            .img
+                width 36px
+                display block
+                min-height 50px
+                float left
+                img
+                    margin-right $paddingBox
+                    vertical-align middle
+                    width auto
+            span
+                display inline
+                
+            small
+                display block
+            
+            
+            
+            
+        
+    
     .wrapper
         max-width $wrapper - 19
         margin auto
@@ -416,6 +473,10 @@ a.CDMU-close
         margin $paddingBox auto
         padding-top 0
         
+        & + h3
+            padding-top 0
+            margin-top 0
+        
     p
         text-align justify
         padding 10px 0
@@ -448,15 +509,20 @@ a.CDMU-close
             margin-bottom 3%
             margin-right 40px
             box-shadow none
-            opacity .5
+            @media( min-width $sc-md )
+                opacity .5
             &:hover
                 opacity 1
             &.active
-                opacity 1
-                width 42px
-                height:42px
-                margin-right: 33px
-                box-shadow rgba($blue,1) 0 0 6px 0
+                @media( min-width $sc-md )
+                    opacity 1
+                    width 42px
+                    height:42px
+                    margin-right: 33px
+                    box-shadow rgba($blue,1) 0 0 6px 0
+                @media( max-width $sc-md )
+                    font-weight bold
+                
         .din-txt
             padding-left 100px
         .contenido
@@ -527,9 +593,8 @@ a.CDMU-close
             box-shadow rgba(#000,.33) 0 0 8px 0
             padding $paddingBox
             float right
+            margin 0 ($paddingBox *2) $paddingBox ($paddingBox *2)
             .mapa
-                margin-left $paddingBox *2
-                margin-bottom $paddingBox
                 width 500px
                 height 600px
                 background $gray
@@ -538,6 +603,7 @@ a.CDMU-close
         @media(max-width $sc-sm)
             .din-txt .overflower
                 float none
+                margin $paddingBox auto
                 .mapa
                     margin-left 0
                     width 100%
@@ -622,9 +688,39 @@ a.CDMU-close
         overflow-x hidden
         transition ease-in-out all 500ms
     .cont-txt
-        overflow auto
+        //overflow auto
         img
             width 100%
             height auto
+
+    .tit-creditos
+        padding-top $paddingBox*2
+        clear both
+    .txt-creditos
+        font-style italic
+        color black
+        //font-weight bold
+        h4
+            font-style normal
+        .blq
+            padding-right $paddingBox*.5
+            &:after
+                content ' | '
+                display inline-block
+                font-weight normal
+                color $gray
+                padding-left $paddingBox*.5
+            &:last-child:after
+                display none
+                
+        small
+            font-weigth normal
+        strong
+            font-weight normal
+            color $gray
+      .cred_antes
+          border-top 1px dotted $gray
+          padding-top $paddingBox
+          
         
         

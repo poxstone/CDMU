@@ -20,11 +20,33 @@ block content
 							h2= gb.titles[2]
 							div.overflower
 								div#map.mapa
-									img(src="#{gb.rdir}/imagenes/cartografias/img/_mapa.png")
+									-//img(src="#{gb.rdir}/imagenes/cartografias/img/_mapa.png")
+										
 							div.cont-txt
-								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
-								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+								p La información contenida en este mapa ha sido recopilada e ingresada directamente por representantes de los poblaciones indígenas como parte de un esfuerzo para integrar los saberes tradicionales y los medios digitales. Lo invitamos a que lo explore en profundidad para apreciar una muestra de la riqueza de las expresiones sonoras y musicales de estos pueblos.
+								ul.leyenda
+									li
+										i.img: img(src="#{gb.rdir}/imagenes/cartografias/img/maps/icoMap.png")
+										span Resguardo indígena CON información disponible
+									li
+										i.img: img(src="#{gb.rdir}/imagenes/cartografias/img/maps/icoMapIna.png")
+										span Resguardo indígena SIN información disponible
+									li
+										i.img: img(src="#{gb.rdir}/imagenes/cartografias/img/maps/icoGris.png")
+										span Resguardo indígena CON información disponible
+											small (click en el ícono para detalles)
+								
+							h2.tit-creditos Créditos
+							hr
+							div.txt-creditos
 
+								h4 Ministerio de Cultura:
+								p: span.blq Paula Marcela Moreno Zapata - <strong>Ministra de Cultura</strong>, María Claudia López Sorzano - <strong>Viceministra de Cultura</strong>, Enzo Rafael Ariza Ayala - <strong>Secretario General</strong>, Ana Roda Fornaguera - <strong>Directora de la Biblioteca Nacional de Colombia</strong>, Jaime Humberto Quevedo Urrea - <strong>Centro de Documentación Musical - Coordinador General del Proyecto CARTOGRAFÍA DE PRÁCTICAS MUSICALES EN COLOMBIA</strong>
+								h4 Con el apoyo de:
+								p: span.blq IGAC - Instituto Geográfico Agustín Codazzi, ONIC - Organización Nacional Indígena de Colombia, Pontificia Universidad Javeriana - Facultad de Comunicación y Lenguaje, Carrera Ciencia de la Información <strong>- Bibliotecología - Sala Matrix</strong>, Fundación Fotón
+								h4 Diseño y desarrollo:
+								p: span.blq Javier Andrés Mesa Martinez - <strong>Diseñador gráfico</strong>, Juan Fernando Córdoba - <strong>Ingeniero de desarrollo</strong>, Luz Angélica Jiménez Rozo - <strong>Ingeniera de desarrollo</strong>, Germán Andrés González - <strong>Lider de proyecto</strong>.
+							.cred_antes
 		div.credits
 			img(src="#{gb.rdir}/imagenes/cartografias/img/banner/credits.png")
 			span.cred-cont Proyecto coordinado por el Centro de Documentación Musical

@@ -18,15 +18,103 @@ block content
 						div.din-txt
 							a.CDMU-close(onclick="cdmu_links.quit(this,'quit',event)",href="#{gb.rdir}/cartografias") &times;
 							h2= gb.titles[0]
+							h3 Músicas Tradicionales, Escuelas de Música Tradicional PNMC, una primera capa
+								|<a title="Descargar documento de parametros de las escuelas de musica tradicional" href="http://www.territoriosonoro.org/CDM/tradicionales/files/parametros.pdf" target="_blank">(pdf)</a>
 							div.overflower
 								div#map.mapa
-									img(src="#{gb.rdir}/imagenes/cartografias/img/_mapa.png")
+									-//img(src="#{gb.rdir}/imagenes/cartografias/img/_mapa.png")
 							div.cont-txt
-								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-								p Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
-								p Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
-								p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-								p Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+								p Son varias las razones por las cuales decidimos iniciar la construcción de esta Cartografía de Prácticas Musicales en Colombia con una capa sobre MÚSICAS TRADICIONALES. Una de ellas es la relación que articula las memorias del patrimonio sonoro con la creación, las prácticas y su relación con el  Plan Nacional de Música del Ministerio de Cultura<a href="#cita1">(1)</a>. Justamente, uno de los ejes de este plan son las Escuelas de Música Tradicional, en las que, como punto de partida reconocemos las Músicas Tradicionales regionales como una práctica musical colectiva de gran arraigo en nuestro país<a href="#cita2">(2)</a> . Este proyecto de Escuelas, después de realizar varias experiencias locales en los últimos 8 años, logró construir una propuesta de carácter nacional en la que se conciben 11 ejes regionales para la creación de Escuelas de Música Tradicional para niños y jóvenes y para el estudio de los sistemas de músicas tradicionales más fuertes presentes en cada uno de estos 11 ejes, haciendo énfasis en los procesos pedagógicos que en la tradición se implementan para la formación de los músicos. Un doble criterio se tuvo en cuenta entonces para la construcción de esta regionalización: la identificación y localización de sistemas fuertes de Músicas Tradicionales y la implementación práctica (teniendo en cuenta los procesos de gestión que ello implica) de Escuelas de Música Tradicional  para niños y jóvenes. 
+								p Otra razón para considerar la elaboración de esta capa de Músicas Tradicionales en esta Cartografía es el valioso archivo de músicas tradicionales que posee el Centro de Documentación Musical de la Biblioteca Nacional, correspondiente a unas 1000 horas de grabación de músicas tradicionales de todo el país,  logradas, la mayoría de ellas, entre 1980 y 1985.
+								p Los ejes regionales, los formatos instrumentales más fuertes en ellos y los músicos que actualmente se desempeñan como asesores en cada uno de ellos, son:  
+								
+								ul.boxes
+									li
+										b MÚSICAS CARIBE ORIENTAL (Conjuntos de acordeón y cuerdas y otros)
+										div Guajira, Cesar y Magdalena. <br> Roger Bermúdez
+									
+									li
+										b MÚSICAS CARIBE OCCIDENTAL (Conjuntos de Gaitas Largas y Cortas, Millo, Baile Cantao, Tambora y Bandas tipo pelayera)
+										div Atlántico, Bolívar, Sucre y Córdoba. <br> Victoriano Valencia
+									
+									li
+										b MÚSICAS ISLEÑAS (Conjuntos típicos de mandolina o violín)
+										div San Andrés y Providencia <br> Jairo Rincón
+									
+									li
+										b MÚSICAS PACÍFICO NORTE (Chirimías Chocoana y Cantos Tradicionales) 
+										div Chocó<br> Leonidas Valencia
+									
+									li
+										b MÚSICAS PACÍFICO SUR  (Conjuntos de Marimba, Arrullo y Cantos Tradicionales)
+										div Litoral Pacífico del Valle, Cauca y Nariño.<br> Héctor Tascón
+									
+									li
+										b MÚSICAS ANDINAS SUR-OCCIDENTE (Bandas de flautas, Conjuntos de cuerdas andinas, Conjuntos de músicas sureñas).
+										div Cauca, Nariño y Occidente del Putumayo.<br> Omar Romero G. 
+									
+									li
+										b MÚSICAS ANDINAS CENTRO-SUR (Conjuntos de Rajaleña, Dúo-Trío Vocal instrumental).
+										div Huila y Tolima.<br> Juan Pablo Hernández
+									
+									li
+										b MÚSICAS ANDINAS CENTRO-ORIENTE (Conjuntos de Torbellino y Guabina, Conjunto carranguero).
+										div Norte de Santander, Santander, Boyacá y Cundinamarca.<br> Efraín Franco
+
+									li
+										b MÚSICAS ANDINAS NOR-OCCIDENTE (Trío instrumental Andino, Estudiantina, Dúo-Trío vocal instrumental y otros).
+										div Valle, Antioquia, Quindío, Risaralda y Caldas.<br> María Eugenia Londoño - Gustavo López
+
+									li
+										b MÚSICAS LLANERAS (Conjuntos llaneros de arpa y bandola).
+										div Vichada, Arauca, Guaviare, Meta, Casanare y Oriente de Cundinamarca y Boyacá.<br> Carlos Rojas 
+
+									li
+										b MÚSICAS DE FRONTERA (Murgas, Conjuntos campesinos – merengue andino) 
+										div Caquetá, Amazonas, Putumayo, Guaviare, Vaupés y Guainía.<br> Alfonso Dávila
+								
+								p En esta idea de regionalización ni el marco geográfico ni la división político-administrativa son los ordenadores. Son las prácticas musicales específicas las que le dan orden y sentido a la idea de región. Coincidiendo con el concepto general de esta Cartografía de Prácticas Musicales en Colombia, no pretendemos elaborar un inventario de músicas tradicionales en todo el país. Se trata de IDENTIFICAR PUNTOS ESTRATÉGICOS en donde fuertes sistemas regionales de músicas tradicionales, asociados a formatos instrumentales específicos, van estructurando sus propias redes de producción, circulación y consumo.
+								p Este ejercicio de identificación y descripción de los sistemas de músicas tradicionales más fuertes en cada uno de los 11 ejes regionales es responsabilidad del asesor de cada eje regional. En todos los casos, se trata de un músico reconocido especializado en las músicas tradicionales de su eje no solo en los aspectos estrictamente sonoros, sino también en la dinámica de producción, circulación y consumo de las músicas a nivel regional. La información contenida en esta primera capa de la Cartografía de Prácticas Musicales proviene de los avances de identificación y descripción de sistemas de músicas tradicionales elaborados por los asesores de cada uno de los ejes regionales del proyecto de Escuelas de Música Tradicional. Es a partir de esos levantamientos iniciales que determinamos cuáles municipios podemos considerar como estratégicos en las prácticas musicales presentes en cada eje. La base del contenido de las reseñas escritas acerca de las músicas en cada uno de estos ejes regionales también fue elaborada a partir de la información aportada por los asesores del proyecto de Escuelas de Música Tradicional. 
+								p Se encuentran alojados en cada uno de los ejes regionales fragmentos de audio MP3 que ejemplifican las músicas tradicionales. Más del 90% de estos fragmentos de audio fueron grabados por el Centro de Documentación Musical y hacen parte de su colección, a ella puede acceder el público mediante consulta directa. A través de esta cartografía se puede acceder a fragmentos de audio de la colección de audio del CDM vía Internet, sin posibilidad de descarga, a través de la figura del DERECHO DE CITA que consagra la publicación de fragmentos de obras preservando los derechos de autores e intérpretes. 
+								p El concepto general de esta Cartografía, su consideración de desarrollo por capas, la implementación específica de la capa de Músicas Tradicionales, la selección de audio y la casi totalidad de la fotografía que ilustra las prácticas musicales de cada eje son autoría de Omar Romero G. quien hace parte del equipo de asesores que conceptualizó el proyecto de Escuelas de Música Tradicional. Fernán Pérez Amaya y Edwin Sanabria López, diseñadores gráficos egresados de la Universidad Jorge Tadeo Lozano, desarrollaron el concepto gráfico y operativo del proyecto basado en la idea original de Omar Romero G. 
+								cite
+									span#cita1 (1) Comercial, académica, ritual, rural, urbana etc. <br>
+									span#cita2 (2) Si desea profundizar haga click en el Plan Nacional de Música
+								
+								h4 Más información en: 
+								ul
+									li Ministerio de Cultura, República de Colombia, Compendio de políticas culturales, PNMC: Plan Nacional de Música para la Convivencia pg 72, 138, 152, 194. [en línea] disponible en: <a href="http://cu: blturaparaeldesarrollo.files.wordpress.com/2011/06/mincultura-colombia-compendio-polc3aliicas-culturales.pdf" target="_blank">aquí</a> URL recuperada y verificada el 14 de marzo de 2015.
+									li Ministerio de Cultura, República de Colombia, Compendio de políticas culturales, PNMC: Plan Nacional de Música para la Convivencia, segunda parte: Políticas,   Política de música, Componentes, Investigación y documentación musical, Líneas de política, Apoyo al proyecto Cartografía Musical de Colombia. Etapa 1: Músicas Tradicionales,  pg 174, documento electrónico [en línea] disponibl: be en: <a href="http://culturaparaeldesarrollo.files.wordpress.com/2011/06/mincultura-colombia-compendio-polc3aliicas-culturales.pdf">aquí</a> URL recuperada y verificada el 14 de marzo de 2015.
+								p: small Ministerio de Cultura (2003). Plan Nacional de música para la convivencia, Escuelas de música tradicional p.15, segundo componente investigativo. Documento electrónico [en línea] disponible en: <a href="http://www.bibliotecanacional.gov.co/CDM/tradicionales/files/parametros.pdf">aquí</a>, URL recuperada y verificada el 14 de marzo de 2015
+								p: small Agradecimientos especiales a Mary Giraldo quien como directora de la Biblioteca Nacional apoyó la realización de este proyecto. A Ana María Arango y a Juan Camilo Segura por sus fotografías incluidas en las galerías de los ejes Músicas Pacífico Norte, Músicas Caribe Occidental y Músicas Pacífico Sur. También al Instituto Departamental de Cultura del Caquetá, especialmente a Iván Losada, por la realización y grabación del Festival Colono de Oro de donde tomamos 2 ejemplos sonoros incluidos en el eje Músicas de Frontera. En ese mismo sentido, agradecemos al maestro Leonidas Valencia por su disco “Lo mejor de la Chirimía Tradicional – Grupo Chirimía”, de donde extractamos 1 tema incluido en el eje Músicas Pacífico Norte. 
+									br
+									-//| Como recomendación técnica para poder navegar sin problemas, asegúrese de activar el permiso para levantar ventanas emergentes (pop-ups) en este sitio. 
+									| Omar Romero G. 
+									| <br>Junio de 2007
+
+
+								 
+											|Paula Marcela Moreno Zapata, <strong>Ministra de Cultura</strong>
+										span.blq
+											|María Cecilia Donado García, <strong>Viceministra de Cultura</strong>
+										span.blq
+											|Yaneth Suárez Acero, <strong>Secretaria General</strong>
+										span.blq
+											|Catalina Ramírez Vallejo, <strong>Directora de la Biblioteca Nacional de Colombia</strong>
+										span.blq
+											|Jaime Humberto Quevedo Urrea, <strong>Coordinador Centro de Documentación Musical</strong>
+										span.blq
+											|Omar Romero G., <strong>Concepto y Realización del Proyecto, Reseñas, Selección, Digitalización y Edición de Audio</strong>
+										span.blq
+											|Omar Romero G. · Ana María Arango · Juan Camilo Segura, <strong>Fotografía</strong>
+										span.blq
+											|Fernán Pérez Amaya • wperezamaya@gmail.com - Edwin Sanabria López • esanabrialopez@yahoo.es, <strong>Diseño, Concepto Gráfico y Operativo</strong> cartografiapracticasmusicales@gmail.com · cartografiapracticasmusicales.blogspot.com
+
+									p TODOS LOS DERECHOS RESERVADOS <br>
+										| © Ministerio de Cultura- Biblioteca Nacional de Colombia- <br>
+										| Septiembre de 2007 · Colombia
+
+								.cred_antes
 
 		div.credits
 			img(src="#{gb.rdir}/imagenes/cartografias/img/banner/credits.png")
