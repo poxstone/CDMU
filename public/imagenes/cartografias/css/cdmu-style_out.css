@@ -1037,44 +1037,6 @@ body.i i {
 .msie_8 #content {
   margin-top: -4px;
 }
-#content,
-#banner #content-inside {
-  max-width: none !important;
-  width: auto;
-}
-a.CDMU-close {
-  display: block;
-  float: right;
-  text-align: center;
-  width: 32px;
-  position: relative;
-  z-index: 11;
-  height: 32px;
-  line-height: 32px;
-  font-size: 24px;
-  color: #333;
-  top: 5px;
-  right: -10px;
-  cursor: pointer;
-  -webkit-transition: ease-in-out 250ms all;
-  -moz-transition: ease-in-out 250ms all;
-  -ms-transition: ease-in-out 250ms all;
-  -o-transition: ease-in-out 250ms all;
-  transition: ease-in-out 250ms all;
-  -webkit-box-shadow: rgba(0,0,0,0) 0px 0px 4px 0;
-  -moz-box-shadow: rgba(0,0,0,0) 0px 0px 4px 0;
-  -ms-box-shadow: rgba(0,0,0,0) 0px 0px 4px 0;
-  -o-box-shadow: rgba(0,0,0,0) 0px 0px 4px 0;
-  box-shadow: rgba(0,0,0,0) 0px 0px 4px 0;
-  text-decoration: none;
-}
-a.CDMU-close:hover {
-  -webkit-box-shadow: rgba(0,0,0,0.1) 2px 2px 4px 0;
-  -moz-box-shadow: rgba(0,0,0,0.1) 2px 2px 4px 0;
-  -ms-box-shadow: rgba(0,0,0,0.1) 2px 2px 4px 0;
-  -o-box-shadow: rgba(0,0,0,0.1) 2px 2px 4px 0;
-  box-shadow: rgba(0,0,0,0.1) 2px 2px 4px 0;
-}
 #CDMU-CONT {
   font-family: lato, arial, sans-serif;
   color: #110101;
@@ -1082,6 +1044,7 @@ a.CDMU-close:hover {
   margin-top: -1px;
   padding-bottom: 100px;
   position: relative;
+  overflow: hidden;
 }
 #CDMU-CONT dt {
   font-weight: bold;
@@ -1380,7 +1343,6 @@ a.CDMU-close:hover {
   height: auto;
   text-align: center;
   border: 1px solid #ccc;
-  color: #878787;
   border-width: 1px 0;
   margin: -60px auto 0;
   max-width: 940px;
@@ -1401,7 +1363,7 @@ a.CDMU-close:hover {
   bottom: 0;
   z-index: 11;
   height: 480px;
-  width: 480px;
+  width: 400px;
   margin-left: -121px;
   -webkit-transition: ease-in-out all 500ms;
   -moz-transition: ease-in-out all 500ms;
@@ -1433,8 +1395,8 @@ a.CDMU-close:hover {
 }
 #CDMU-CONT .menu-gram .lnk-gram {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 35px;
+  left: -50px;
   width: 100%;
   height: 100%;
   -webkit-transition: ease-in-out all 250ms;
@@ -1583,7 +1545,7 @@ a.CDMU-close:hover {
 #CDMU-CONT .menu-gram .text-gram {
   height: 100%;
   position: absolute;
-  width: 940px;
+  width: 740px;
   top: 0;
   left: 0;
   margin-left: 121px;
@@ -2008,6 +1970,7 @@ a.CDMU-close:hover {
   z-index: 10;
   height: 1px;
   margin-top: -1px;
+*
 }
 #DIN-CON .wrapper {
   position: relative;
@@ -2117,3 +2080,4 @@ a.CDMU-close:hover {
   border-top: 1px dotted #666;
   padding-top: 10px;
 }
+*

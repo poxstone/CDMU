@@ -1,0 +1,30 @@
+extends layout
+
+
+block head
+	include header2
+
+block content
+
+	div#CDMU-CONT.not-class
+		div.header
+			div.bg-figure
+			div.wrapper
+				link#stylo(rel="stylesheet",href="#{gb.rdir}/imagenes/cartografias/css/cdmu-style_out.css")
+				include menu2
+
+		div.contenido
+
+			div.wrapper
+				h1= gb.titles[8]
+				p Múltiples historias y geografías modelan la gran cantidad de prácticas musicales que se desarrollan en nuestro país. Historias de antes y de ahora, nuevos relieves que fundan sonoridades en torno a las cuales se aglutina la gente.
+				p Pretender un mapeo de las prácticas musicales bajo la condición histórica de actualidad y movilidad nos obliga a comprender las músicas en nuestro país como expresiones ágiles, dinámicas, capaces de ser apropiadas y de apropiarse territorios, instrumentos, repertorios, escenarios, técnicas, tecnologías, todo cuanto sea necesario para enfrentar el reto diario de mantenerse vigentes, de circular.    
+				p En esta Cartografía de Prácticas Musicales en Colombia no tratamos de realizar un inventario localizado de La música en Colombia, solo intentamos IDENTIFICAR PUNTOS ESTRATÉGICOS en donde PRÁCTICAS MUSICALES ESPECÍFICAS, del tipo que sea (Comercial, académica, ritual, rural, urbana etc.), van estructurando sus propias redes de producción, circulación y consumo. Se trata de seguir la ruta de movilidad de diversas prácticas sonoras que se desarrollan en ámbitos locales, regionales y nacionales en Colombia.
+				p Este enfoque nos permite definir variadas posibilidades de análisis y descripción de las músicas y construir problemas de investigación en torno a las prácticas musicales. En algunas ocasiones el criterio de definición de las prácticas puede ser el marco geográfico-territorial, otras veces puede ser el formato instrumental de las agrupaciones (bandas, coros, orquestas), otras puede ser el ámbito en el que se producen las músicas, como por ejemplo los programas musicales universitarios existentes en el país, o, por qué no, el carácter ritual o religioso de las músicas.
+				p Se trata de ir creando una cartografía con muchas capas en donde cada capa corresponda a una práctica musical distinta, con sus propias características y coordenadas de análisis, con sus particulares maneras de ser. Gradualmente, capa por capa, iremos levantando una Cartografía de Prácticas Musicales tan compleja, tan desigual y conflictiva como las músicas mismas, una cartografía de la memoria musical viva de nuestro país.
+				p (1) Si desea profundizar haga click en el Plan Nacional de Música
+				p (2) En el proyecto de Escuelas de Música Tradicional consideramos que las Músicas Indígenas deben tener un tratamiento especial concertado con las autoridades de las respectivas comunidades. Únicamente referenciamos en este proyecto la música de bandas de flautas de los pueblos Nasa, Guambiano y Yanacona de los departamento de Cauca y Huila por su fuerte relación con la música de contextos campesinos del sur del Cauca. Para profundizar en el marco conceptual de las Escuelas de Música Tradicional descargue el documento de “Parámetros de las Escuelas de Música Tradicional” haciendo click en el botón rojo ubicado a la derecha de este caja de texto. Formato PDF.
+
+		div.credits
+			img(src="#{gb.rdir}/imagenes/cartografias/img/banner/credits.png")
+			span.cred-cont Proyecto coordinado por el Centro de Documentación Musical

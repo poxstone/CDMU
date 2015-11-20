@@ -46,7 +46,7 @@ router.get( '/'+gb.links[7], function(req, res, next ) {
 });
 
 router.get( '/'+gb.links[8], function(req, res, next ) {
-	res.render( 'index', { qr : req.query, gb : gb } );
+	res.render( 'index2', { qr : req.query, gb : gb } );
 });
 
 router.get('/total', function(req, res, next) {
