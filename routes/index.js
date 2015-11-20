@@ -4,8 +4,9 @@ var gb = {
 	//rdir : 'http://www.bibliotecanacional.gov.co/',
 	rdir :'',
 	titles : ['Músicas Tradicionales','Festivales de Música','Expresiones sonoras y musicales Comunidades Indigenas','Investigación y Documentación','Bandas','Tesauro','Expresiones Vocales','A manera de introducción','Cartografía de Prácticas musicales en Colombia'],
-	links : ['cartografias_tradicionales', 'cartografias_festivales', 'cartografias_indigenas', 'cartografias_redes', 'cartografias_bandas', 'cartografias_tesauro', 'vocales', 'introcuccion','cartografias']
+	links : ["cartografias_tradicionales", "cartografias_festivales", "cartografias_indigenas", "cartografias_redes", "cartografias_bandas", "cartografias_tesauro", 'cartografias_vocales', 'cartografias',"cartograf%C3%AD-de-pr%C3%A1cticas-musicales-en-colombia"]
 };
+gb.home= 'cartograf%C3%AD-de-pr%C3%A1cticas-musicales-en-colombia';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

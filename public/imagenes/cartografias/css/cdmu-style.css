@@ -1455,15 +1455,15 @@ a.CDMU-close:hover {
   -o-transition: ease-in-out 250ms all;
   transition: ease-in-out 250ms all;
 }
-.cartografias#CDMU-CONT .header .bg-figure {
+.cartografias-de-practicas-musicales-en-colombia#CDMU-CONT .header .bg-figure {
   background-color: #199dc3;
   background-image: url("../img/banner/bg-00.png");
 }
-.hover_cartografias#CDMU-CONT .header .bg-figure {
+.hover_cartografias-de-practicas-musicales-en-colombia#CDMU-CONT .header .bg-figure {
   background-color: #199dc3 !important;
   background-image: url("../img/banner/bg-00.png") !important;
 }
-#CDMU-CONT.hover_cartografias .menu-gram .text-gram .tipographic.cartografias {
+#CDMU-CONT.hover_cartografias-de-practicas-musicales-en-colombia .menu-gram .text-gram .tipographic.cartografias-de-practicas-musicales-en-colombia {
   display: block;
   -webkit-animation: showUp ease-in-out 500ms;
   -moz-animation: showUp ease-in-out 500ms;
@@ -1471,7 +1471,7 @@ a.CDMU-close:hover {
   -o-animation: showUp ease-in-out 500ms;
   animation: showUp ease-in-out 500ms;
 }
-#CDMU-CONT.hover_cartografias .tipographic.cartografias {
+#CDMU-CONT.hover_cartografias-de-practicas-musicales-en-colombia .tipographic.cartografias {
   visibility: hidden;
 }
 .cartografias_tradicionales#CDMU-CONT .header .bg-figure {
@@ -1588,15 +1588,15 @@ a.CDMU-close:hover {
 #CDMU-CONT.hover_cartografias_tesauro .tipographic.cartografias {
   visibility: hidden;
 }
-.vocales#CDMU-CONT .header .bg-figure {
+.cartografias_vocales#CDMU-CONT .header .bg-figure {
   background-color: #438f42;
   background-image: url("../img/banner/bg-07.png");
 }
-.hover_vocales#CDMU-CONT .header .bg-figure {
+.hover_cartografias_vocales#CDMU-CONT .header .bg-figure {
   background-color: #438f42 !important;
   background-image: url("../img/banner/bg-07.png") !important;
 }
-#CDMU-CONT.hover_vocales .menu-gram .text-gram .tipographic.vocales {
+#CDMU-CONT.hover_cartografias_vocales .menu-gram .text-gram .tipographic.cartografias_vocales {
   display: block;
   -webkit-animation: showUp ease-in-out 500ms;
   -moz-animation: showUp ease-in-out 500ms;
@@ -1604,18 +1604,18 @@ a.CDMU-close:hover {
   -o-animation: showUp ease-in-out 500ms;
   animation: showUp ease-in-out 500ms;
 }
-#CDMU-CONT.hover_vocales .tipographic.cartografias {
+#CDMU-CONT.hover_cartografias_vocales .tipographic.cartografias {
   visibility: hidden;
 }
-.introcuccion#CDMU-CONT .header .bg-figure {
+.cartografias#CDMU-CONT .header .bg-figure {
   background-color: #8141ca;
   background-image: url("../img/banner/bg-08.png");
 }
-.hover_introcuccion#CDMU-CONT .header .bg-figure {
+.hover_cartografias#CDMU-CONT .header .bg-figure {
   background-color: #8141ca !important;
   background-image: url("../img/banner/bg-08.png") !important;
 }
-#CDMU-CONT.hover_introcuccion .menu-gram .text-gram .tipographic.introcuccion {
+#CDMU-CONT.hover_cartografias .menu-gram .text-gram .tipographic.cartografias {
   display: block;
   -webkit-animation: showUp ease-in-out 500ms;
   -moz-animation: showUp ease-in-out 500ms;
@@ -1623,7 +1623,7 @@ a.CDMU-close:hover {
   -o-animation: showUp ease-in-out 500ms;
   animation: showUp ease-in-out 500ms;
 }
-#CDMU-CONT.hover_introcuccion .tipographic.cartografias {
+#CDMU-CONT.hover_cartografias .tipographic.cartografias {
   visibility: hidden;
 }
 #CDMU-CONT .credits {

@@ -158,6 +158,7 @@ var cdmu_links= {
 
         var $lnk = vars.$din_lnks.removeClass('active').filter('[href*="'+vars.url+'"]').addClass('active');
 
+
         $lnk.click();
         
     },
