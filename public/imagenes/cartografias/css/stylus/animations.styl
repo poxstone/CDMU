@@ -2,6 +2,31 @@
 @import 'mixin.styl'
 @import 'variables.styl'
 
+
+//USE
+@keyframes aguja_move {
+	0% {
+		transform rotate(0deg)
+	}
+	50% {
+		transform rotate(5deg)
+	}
+	100% {
+		transform rotate(0deg)
+	}
+}
+//USE
+@keyframes cd_move {
+	0% {
+		transform translateY(-1px)
+	}
+	50% {
+		transform translateY(1px)
+	}
+	100% {
+		transform translateY(-1px)
+	}
+}
 //USE
 @keyframes openRight {
 	0% {

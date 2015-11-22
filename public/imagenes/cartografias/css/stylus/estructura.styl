@@ -288,7 +288,7 @@ a.CDMU-close
         .img-gram
             height 100%
             transition ease-in-out all 500ms
-            img
+            img.gramfn
                 display block
                 position absolute
                 top 0
@@ -297,6 +297,28 @@ a.CDMU-close
                 margin auto
                 max-width 100%
                 transition ease-in-out 250ms all
+            .anim
+                position absolute
+                top 54%
+                left 30%
+                width 25%
+                max-width 119px
+                height 20px
+                
+                .disco
+                    position absolute
+                    top 6px
+                    left 7px
+                    width 100%
+                    animation cd_move ease-in-out 1s infinite
+                .aguja
+                    animation aguja_move ease-in-out 1s infinite
+                    transform-origin 0
+                    position absolute
+                    top 0
+                    left 0
+                    width 38%
+                
                 
         .lnk-gram
             position absolute
@@ -401,10 +423,18 @@ a.CDMU-close
         @media( max-width $sc-sm)
             width 100%
             margin-left 0
-            img
+            img.gramfn
                 min-width 320px
                 margin-left -110px !important
-            
+                
+            .anim
+                left 36px !important
+                @media( max-width $sc-xs)
+                    width 23%
+                    left -1px !important
+                    top 254px !important
+                
+        
             .lnk-gram
                 left auto
                 right 0
@@ -491,12 +521,14 @@ a.CDMU-close
         .menu-gram
             width 240px
             height 380px
-            img
+            img.gramfn
                 top auto
                 bottom 42px
                 margin-left: 0 !important
             .text-gram
                 display none !important
+            .anim
+                top 59.5%
                 
                 
         .lnk-gram a
@@ -539,12 +571,14 @@ a.CDMU-close
                 //max-height 100%
                 //overflow auto
                 top 0
-                img
+                img.gramfn
                     max-width none
                     width 100%
                     min-width 75px
                     bottom auto
                     top $paddingBox
+                .anim
+                    display none
                 &.hover
                 
                     .lnk-gram

@@ -6,6 +6,9 @@ script(src="#{gb.rdir}/imagenes/cartografias/js/cdmu-dsn.js")
 div.menu-gram
 	div.img-gram
 		img.gramfn(src="#{gb.rdir}/imagenes/cartografias/img/banner/gramofono.png",onclick="cdmu_links.togglMenu(this.evento)")
+		.anim
+			img.disco(src="#{gb.rdir}/imagenes/cartografias/img/banner/gramofono_disco.png")
+			img.aguja(src="#{gb.rdir}/imagenes/cartografias/img/banner/gramofono_aguja.png")
 	div.lnk-gram
 		
 		for name, index in gb.titles
@@ -14,8 +17,8 @@ div.menu-gram
 				-link = '#'+gb.links[index]
 				
 			if( index < (gb.titles.length-1) )
-
 				a(class='lnk_#{index}',href=link): span.label #{name}
+
 	div.text-gram
 		div.tipographic(class=gb.links[0])
 			span.md Musicas
