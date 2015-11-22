@@ -54,6 +54,7 @@ var cdmu_links= {
             }else if(option=='mouseenter'){
                 
                 vars.$cdmu_general.addClass( 'hover_'+lnk_id );//add class from id section
+                console.log(lnk_id);
                 
             }else if(option=='mouseleave'){
                 
