@@ -1846,7 +1846,7 @@ a.CDMU-close:hover {
 }
 #CDMU-CONT .menu-gram {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   z-index: 11;
   height: 480px;
   width: 480px;
@@ -2356,9 +2356,9 @@ a.CDMU-close:hover {
   #CDMU-CONT.is-normal .menu-gram img.gramfn {
     max-width: none;
     width: 100%;
-    min-width: 75px;
+    min-width: 50px;
     bottom: auto;
-    top: 10px;
+    top: 20px;
   }
   #CDMU-CONT.is-mapa .menu-gram .anim,
   #CDMU-CONT.is-iframe .menu-gram .anim,
@@ -2446,10 +2446,10 @@ a.CDMU-close:hover {
   box-shadow: rgba(0,0,0,0.33) 0 0 8px 0;
   padding: 10px;
   float: right;
-  margin: 0 20px 10px 20px;
+  margin: 0 0 10px 20px;
 }
 #CDMU-CONT.is-mapa .din-txt .overflower .mapa {
-  width: 500px;
+  width: 520px;
   height: 600px;
 }
 #CDMU-CONT.is-mapa .din-txt .overflower .mapa background $gray img {
