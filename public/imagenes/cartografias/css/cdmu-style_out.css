@@ -1717,11 +1717,11 @@ body.i i {
   visibility: hidden;
 }
 .cartografias_tesauro#CDMU-CONT .header .bg-figure {
-  background-color: #906a12;
+  background-color: #438f42;
   background-image: url("../img/banner/bg-06.png");
 }
 .hover_cartografias_tesauro#CDMU-CONT .header .bg-figure {
-  background-color: #906a12 !important;
+  background-color: #438f42 !important;
   background-image: url("../img/banner/bg-06.png") !important;
 }
 #CDMU-CONT.hover_cartografias_tesauro .menu-gram .text-gram .tipographic.cartografias_tesauro {
@@ -1736,11 +1736,11 @@ body.i i {
   visibility: hidden;
 }
 .cartografias_vocales#CDMU-CONT .header .bg-figure {
-  background-color: #438f42;
+  background-color: #906a12;
   background-image: url("../img/banner/bg-07.png");
 }
 .hover_cartografias_vocales#CDMU-CONT .header .bg-figure {
-  background-color: #438f42 !important;
+  background-color: #906a12 !important;
   background-image: url("../img/banner/bg-07.png") !important;
 }
 #CDMU-CONT.hover_cartografias_vocales .menu-gram .text-gram .tipographic.cartografias_vocales {

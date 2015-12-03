@@ -104,7 +104,8 @@ body.i i
 
 //CONTENIDO
 #content
-#banner #content-inside
+#banner
+#content-inside
     max-width none !important
     width auto
 a.CDMU-close
@@ -234,7 +235,7 @@ a.CDMU-close
             transition ease-in-out 250ms all
     
             $colors= $ban0, $ban1, $ban2, $ban3, $ban4, $ban5, $ban6, $ban7, $ban8
-            $links= "cartografias-de-practicas-musicales-en-colombia", "cartografias_tradicionales", "cartografias_festivales", "cartografias_indigenas", "cartografias_redes", "cartografias_bandas", "cartografias_tesauro", 'cartografias_vocales', 'cartografias'
+            $links= "cartografias-de-practicas-musicales-en-colombia", "cartografias_tradicionales", "cartografias_festivales", "cartografias_indigenas", "cartografias_redes", "cartografias_bandas", 'cartografias_vocales', "cartografias_tesauro", 'cartografias'
             for value, index in $links
                 $uri= '../img/banner/bg-0'+(index)+'.png'
                 $color= $colors[index]

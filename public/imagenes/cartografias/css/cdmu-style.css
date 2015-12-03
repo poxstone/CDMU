@@ -1478,7 +1478,8 @@ body.i i {
   margin-top: -4px;
 }
 #content,
-#banner #content-inside {
+#banner,
+#content-inside {
   max-width: none !important;
   width: auto;
 }
@@ -1753,32 +1754,13 @@ a.CDMU-close:hover {
 #CDMU-CONT.hover_cartografias_bandas .tipographic.cartografias {
   visibility: hidden;
 }
-.cartografias_tesauro#CDMU-CONT .header .bg-figure {
-  background-color: #906a12;
-  background-image: url("../img/banner/bg-06.png");
-}
-.hover_cartografias_tesauro#CDMU-CONT .header .bg-figure {
-  background-color: #906a12 !important;
-  background-image: url("../img/banner/bg-06.png") !important;
-}
-#CDMU-CONT.hover_cartografias_tesauro .menu-gram .text-gram .tipographic.cartografias_tesauro {
-  display: block;
-  -webkit-animation: showUp ease-in-out 500ms;
-  -moz-animation: showUp ease-in-out 500ms;
-  -ms-animation: showUp ease-in-out 500ms;
-  -o-animation: showUp ease-in-out 500ms;
-  animation: showUp ease-in-out 500ms;
-}
-#CDMU-CONT.hover_cartografias_tesauro .tipographic.cartografias {
-  visibility: hidden;
-}
 .cartografias_vocales#CDMU-CONT .header .bg-figure {
   background-color: #438f42;
-  background-image: url("../img/banner/bg-07.png");
+  background-image: url("../img/banner/bg-06.png");
 }
 .hover_cartografias_vocales#CDMU-CONT .header .bg-figure {
   background-color: #438f42 !important;
-  background-image: url("../img/banner/bg-07.png") !important;
+  background-image: url("../img/banner/bg-06.png") !important;
 }
 #CDMU-CONT.hover_cartografias_vocales .menu-gram .text-gram .tipographic.cartografias_vocales {
   display: block;
@@ -1789,6 +1771,25 @@ a.CDMU-close:hover {
   animation: showUp ease-in-out 500ms;
 }
 #CDMU-CONT.hover_cartografias_vocales .tipographic.cartografias {
+  visibility: hidden;
+}
+.cartografias_tesauro#CDMU-CONT .header .bg-figure {
+  background-color: #906a12;
+  background-image: url("../img/banner/bg-07.png");
+}
+.hover_cartografias_tesauro#CDMU-CONT .header .bg-figure {
+  background-color: #906a12 !important;
+  background-image: url("../img/banner/bg-07.png") !important;
+}
+#CDMU-CONT.hover_cartografias_tesauro .menu-gram .text-gram .tipographic.cartografias_tesauro {
+  display: block;
+  -webkit-animation: showUp ease-in-out 500ms;
+  -moz-animation: showUp ease-in-out 500ms;
+  -ms-animation: showUp ease-in-out 500ms;
+  -o-animation: showUp ease-in-out 500ms;
+  animation: showUp ease-in-out 500ms;
+}
+#CDMU-CONT.hover_cartografias_tesauro .tipographic.cartografias {
   visibility: hidden;
 }
 .cartografias#CDMU-CONT .header .bg-figure {
